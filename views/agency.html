@@ -1,0 +1,30 @@
+
+{{!-- no_underscore agent.0.agency_name --}}
+ 
+
+{{#each agent}}
+<h3>{{no_underscore agency_name}} </h3>
+  Agency System Map: <a href="/system_map/{{agency_name}}">All Routes</a><br />
+  {{agency_url}}<br/>
+  {{agency_timezone}}<br/>
+  {{agency_phone}}<br/>
+  <a href="{{agency_fare_url}}" target="_new">{{agency_fare_url}}</a><br/>
+  
+{{/each}}
+
+
+
+<h3>Agency Routes</h3>
+
+
+{{#each agent_routes}}
+<p><a href="/route_stops/{{route_agency_id}}/{{route_id}}/{{link route_short_name}}/{{link route_long_name}}">{{route_short_name}} : {{route_long_name}} </a></p>
+
+  
+  
+{{/each}}
+
+
+
+
+

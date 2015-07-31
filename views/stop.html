@@ -1,0 +1,217 @@
+<h2>{{stop.name}} - ( {{stop.id}} )</h2>
+<!-- 
+Stop latitude: {{stop.lat}}
+<br />
+<br />
+Stop Longitude: {{stop.lon}}
+
+
+<p/>
+
+-->
+
+<style type="text/css">
+      
+      #map-canvas { height: 100% ; margin: 0; padding: 0; width: 100%; }
+</style>
+	
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+       
+	<script>
+	function initialize() {
+	  var myLatlng = new google.maps.LatLng( {{stop.lat}}, {{stop.lon}} );
+	  
+	  
+	  var mapOptions = {
+	    zoom: 17,
+	    center: myLatlng,
+	    mapTypeId: google.maps.MapTypeId.ROADMAP
+	  };
+      
+	  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	  
+	  var transitLayer = new google.maps.TransitLayer();
+	  transitLayer.setMap(map);	 
+	  
+	  var image = '/bus_stop_icon.png';
+	  
+
+	  var contentString = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<h1 id="firstHeading" class="firstHeading">{{stop.name}}</h1>'+
+	      '<div id="bodyContent">'+
+	      '<p><b>Stop ID: {{stop.id}}</b> <br />Bus Travel Direction: {{stop.direction}} <br />Routes: {{stop.routes}} </p>'+
+	
+		 
+	      '<p>Agency Web, <a href="http://www.mta.info">'+
+	      'mta.info</a> '+
+	      '</p>'+
+	      '</div>'+
+	      '</div>';
+		  
+		  
+	  var infowindow = new google.maps.InfoWindow({
+	      content: contentString
+	  });
+
+	  var marker = new google.maps.Marker({
+	      position: myLatlng,
+	      map: map,
+	      title: '{{stop.name}}',
+		  icon: image
+	  });
+   
+	  google.maps.event.addListener(marker, 'click', function() {
+	    infowindow.open(map,marker);
+	  });
+	  
+	  
+	  
+
+	  
+	  
+	  
+	  
+	} //ends init
+	
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+
+
+    <div id="map-canvas" style="border-style:solid;
+border-width:5px; min-height: 400px; min-width: 100px;"></div>
+
+  
+
+
+
+
+<h3>Stop Schedule</h3>
+
+
+<!-- put in stop schedule and monitor info here -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+			$.ajax({
+				dataType: "jsonp",
+				url: "http://bustime.mta.info/api/where/schedule-for-stop/{{stop.id}}.json?key=3d264d9a-1aca-48b1-b375-929864bb5079",
+				success: function(data) {
+				    $.each(data, function(index, info) {
+				        $("#results").append(
+						    //"<div>" + info + index+"</div>"
+						);
+						if(index == 'data'){
+							$.each(info.references.stops, function(ind, stops) {
+					            $("#data").append(
+							        //"<div>" + ind + stops+ stops.id +  stops+ stops.lat + stops+ stops.lon +  "</div>"
+							    );
+							});	
+							
+							$.each(info.entry.stopRouteSchedules, function(ind, sched) {
+					            $("#entry").append(
+							        "<div><h4>ROUTE: " + sched.routeId +    "</h4></div>"
+							    );
+								
+								$.each(sched.stopRouteDirectionSchedules, function(ind, schedDir) {
+						            $("#entry").append(
+								        "<div><h4>Bus Headsign: " + schedDir.tripHeadsign + "</h4></div>"
+								    );
+									
+									$.each(schedDir.scheduleStopTimes, function(ind, schedStops) {
+										
+										var arrivalDate = new Date(schedStops.arrivalTime);
+										var departureDate = new Date(schedStops.departureTime);
+										var serviceId = schedStops.serviceId;
+										var tripId = schedStops.tripId;
+										
+							            $("#entry").append(
+									        "<div>" + "<b>Arrival:</b> " + arrivalDate + "  <b>Departs:</b> " + departureDate +   "</div>" 
+											
+
+									    );
+									});	
+									
+								});	
+								
+								
+							});	
+							
+						}
+						
+						
+						
+					});
+				}
+			});
+		});
+		
+		/*
+		
+		
+		
+		
+		*/
+		
+		
+		$(document).ready(function(){
+			
+			var stopId = '{{stop.id}}';
+			stopId = stopId.split("_");
+			stopId = stopId[1];
+			
+			
+					$.ajax({
+						dataType: "jsonp",
+						url: "http://bustime.mta.info/api/siri/stop-monitoring.json?key=3d264d9a-1aca-48b1-b375-929864bb5079&OperatorRef=MTA&MonitoringRef="+stopId,
+						success: function(data) {
+						    $.each(data, function(index, info) {
+								var monitor = info.ServiceDelivery.StopMonitoringDelivery;
+						        
+							    $.each(monitor, function(index, prog) {
+									var stopVisit = prog.MonitoredStopVisit;
+							       
+								    $.each(stopVisit, function(index, veh) {
+										var vehJourney = veh.MonitoredVehicleJourney
+								        var lineRef = vehJourney.LineRef;
+										var VehicleLocation = vehJourney.VehicleLocation;
+										var VehicleLon = VehicleLocation.Longitude;
+										var VehicleLat = VehicleLocation.Latitude;
+										var VehicleBearing = vehJourney.Bearing;
+										var VehicleProgressRate = vehJourney.ProgressRate;
+										var MonitoredCall = vehJourney.MonitoredCall;
+										var Extensions = MonitoredCall.Extensions.Distances;
+										var CallDistanceAlongRoute = Extensions.CallDistanceAlongRoute;
+										var DistanceFromCall = Extensions.DistanceFromCall;
+										var PresentableDistance = Extensions.PresentableDistance;
+										var StopsFromCall = Extensions.StopsFromCall;
+							            $("#siri").append(
+									        "<div> <b>Next Bus Distance Away:</b> " + DistanceFromCall + " ( " + PresentableDistance +   ") "  + " Stops Away: " +StopsFromCall + " Line: "+lineRef +"</div>" 
+											
+
+									    );
+										
+									}); //ends prog loop
+								
+								}); //ends info loop
+								
+							}); //ends data loop
+						}
+					});
+				});
+		</script>
+		
+		<div id="siri"></div>
+		
+		<div id="results"></div>
+		
+		<div id="data"></div>
+		
+		<div id="entry"></div>
+		
+		

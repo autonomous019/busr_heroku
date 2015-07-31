@@ -1,0 +1,13 @@
+agency_id,route_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1,1,"","Mainline","",3,,,
+1,8,"","Willow Creek-Arcata","",3,,,
+1,303,"","Southern Humboldt Local Bus","",3,,,
+1,822,"","Southern Humboldt Intercity","",3,,,
+2,3,"","Red Route","Red Route begins service at H & Manzanita @ 6:28 A.M. and ends service @7:00 P.M. at H & 3rd",3,,cc0000,ffffff
+2,4,"","Green Route","Green Route begins at Harris & F @ 6:52 A.M. and ends service @ 6:44 P.M. @ Harris & F",3,,006600,ffffff
+2,5,"","Gold Route","Gold Route begins service on weekdays at Adult Ed School @ 6:15 A.M. and ends service @ 7:00 A.M. at H & 3rd.  The Gold Route also operates on Saturday, beginning at H & 3rd at 10 A.M. and running until 5 P.M.",3,,ffcc00,
+2,6,"","Purple Route","Weekdays, Purple Route begins service at H & 9th @ 6:39 A.M. and ends service at H & 3rd @ 7:00 P.M.  Saturdays, Purple Route begins service at H & 3rd at 10 A.M. and ends at H & 3rd @ 5:00 P.M.",3,,5C0080,ffffff
+2,7,"","Rainbow Route","The rainbow route operates on Saturdays only, beginning at H & 3rd at 10 A.M., and running hourly until 5 P.M.",3,,ff00cc,
+3,13,"","Red Route","The Red Route runs hourly from 7:05 am to 9:57 pm on weekdays.",3,,cc0000,ffffff
+3,14,"","Gold Route","The Gold Route runs hourly from 7:05 am to 9:57 pm on weekdays.",3,,ffcc33,000000
+3,15,"","Orange Route","The Orange Route runs hourly from 7:05 am to 7:05 pm on Saturdays.",3,,ff8000,000000

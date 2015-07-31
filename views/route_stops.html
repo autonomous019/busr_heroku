@@ -1,0 +1,485 @@
+
+<h3>Route: {{route_short_name}} : {{route_long_name}}  {{route_box}}</h3>
+
+
+
+{{ trans_route_maps.length }}
+
+{{#each transfers}}
+    {{transfers}}
+{{/each}}
+
+ <style>
+ #map {
+ 	position: absolute;
+    text-position: center;
+ 	height: 60%;
+ 	width: 80%;
+ 	/* z-index: 1; */
+ }
+ 
+ 
+ .leaflet-control-command{
+ 	background-image: url('/bus_stop_icon.png');
+	
+ }
+ 
+ 
+ 
+ .leaflet-control-layers-toggle:after{ 
+	 background-image: url('/bus_stop_icon.png');
+     content:" "; 
+     color:#000 ;
+	 width: 50px;
+	 height: 50px;
+	 background-position: 50% 50%;
+	 background-repeat: no-repeat;
+	 display: block;
+	 padding: 3px;
+	 border-radius: 4px;
+	 -webkit-border-radius: 4px;
+	 -moz-border-radius: 4px;
+	 box-shadow: 0 1px 7px rgba(0, 0, 0, 0.65);
+	 cursor: auto;
+	 text-align: center;
+	 background-color: #FFFFFF;
+  }
+
+  .leaflet-control-layers-toggle:hover
+	 {
+	     background-color: #F4F4F4;
+	 }
+ .leaflet-control-layers-toggle{ 
+     width:auto;
+     background-position:3px 50% ;
+     padding:0px;
+    
+     text-decoration:none;
+     line-height:36px;
+
+ }
+ </style>
+
+ 
+<div id="latlng"></div>
+<div id="map"></div>
+
+  
+
+
+
+
+
+
+ <br /><br />
+  <br /><br />
+   <br /><br />
+    <br /><br />
+
+
+{{#each stops}}
+
+<div class="modal fade" id="stop{{stop_id}}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">{{stop_name}} 
+		
+		
+		</h4>
+      </div>
+      <div class="modal-body">
+        <p><div id="display-text">&hellip;
+		<div id="stop_transfers_{{stop_id}}"></div>
+		<div id="stop_info_{{stop_id}}"></div>
+		
+		
+		</div></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+{{/each}}
+
+
+	
+
+<div id="info_panel">
+	
+	
+	
+  
+	  <script type="text/javascript">
+	  //create arrays of information for further processing on client
+  
+	  var sched = new Array();
+	  var stop_info = new Array();
+	  var bus_info = new Array();
+
+      var route_center_coords = "{{route_center}}";
+	  var route_box_coords = "{{route_box}}";
+	  var coords = route_center_coords.split(":");
+	  var route_lat = coords[0];
+	  var route_lon = coords[1];
+	  var box_coords = route_box_coords.split(",");
+	  var route_first_lat = box_coords[0];
+	  var route_last_lat = box_coords[1];
+	  var route_first_lon = box_coords[2];
+	  var route_last_lon = box_coords[3];
+
+
+	  var trans = new Array();
+ 
+	  //stops information
+
+	   {{#each stops}}
+   
+	   stop_info.push({
+      
+	 	  stop_id: '{{stop_id}}',
+	 	  stop_name: '{{stop_name}}',
+	 	  stop_lat: '{{stop_lat}}',
+	 	  stop_lon: '{{stop_lon}}'
+	  
+	   });
+   
+	   {{/each}}
+
+
+
+	  {{#each schedules}}
+
+	  sched.push({
+	      trip_id: '{{trip_id}}',
+		  stop_id: '{{stop_id}}',
+		  arrival_time: '{{arrival_time}}',
+		  sequencer: '{{sequencer}}',
+		  distance_from_head: '{{distance_from_head}}',
+		  days: '{{days}}',
+		  trip_headsign: '{{trip_headsign}}',
+		  block_id: '{{block_id}}'
+	  });
+  
+	    
+	  {{/each}}
+	  
+	  
+	  {{#each transfers}}
+	      
+	  trans.push({
+	      
+		  stop_id: '{{stop_id}}',
+		  transfer: '{{transfer}}'
+		  
+	  });
+	  {{/each}}
+
+	  </script>
+  
+  
+  
+  
+	<script type="text/javascript">
+	
+
+
+	function onBusLocClick(e) {
+	
+		$('#myModal').appendTo("body").modal('show');
+
+	}
+
+
+	{{#each stops}}
+	function onStopClick{{stop_id}}(e) {
+		$('#stop{{stop_id}}').appendTo("body").modal('show');
+		filterStopsInfo('{{stop_id}}', '{{stop_name}}');
+		filterStopsTransfers('{{stop_id}}', '{{stop_name}}');
+	}
+	{{/each}}
+
+		var latlngs = new Array();	
+		{{#each route_map}}
+			 latlngs.push(new L.LatLng( {{shape_pt_lat}}, {{shape_pt_lon}} ));
+		{{/each}}
+		
+			      var stops = [
+		              {{#each stops}}
+
+			          {
+			               "type": "Feature",
+			               "properties": { 
+					           "stop_id": "{{stop_id}}", 
+	    			            "stop_name": "{{stop_name}}",
+				                "popupContent": "<b>{{stop_name}}</b><br />Stop ID: {{stop_id}} ",
+							
+				            },
+			                "geometry": {
+			                   "type": "Point",
+			                   "coordinates": [ {{stop_lat}}, {{stop_lon}} ]
+			                }
+			          },
+	
+	  	              {{/each}}
+			       ];
+			   
+			   
+				   //deprecaed not actually used
+				   var bus_locs = [
+				   	 	            
+								   
+								   
+													 
+													  {{#each realbus}}
+
+								   	 		          {
+								   	 		               "type": "Feature",
+								   	 		               "properties": { 
+								   	 				           "route_real_id": "{{route_real_id}}", 
+								   	     			            "headsign": "{{headsign}}",
+								   	 			                "popupContent": "<b>{{real_route_id}}</b> - <small>{{time_delay}}</small>",
+
+								   	 			            },
+								   	 		                "geometry": {
+								   	 		                   "type": "Point",
+								   	 		                   "coordinates": [ {{lat}}, {{lon}} ]
+								   	 		                }
+								   	 		          },
+
+								   	   	              {{/each}}
+													
+								   	 		     			   
+	 		      ];
+		
+				   var geojsonMarkerOptions = {
+				       radius: 3,
+				       fillColor: "#ff7800",
+				       color: "#000",
+				       weight: 1,
+				       opacity: 1,
+				       fillOpacity: 0.8
+				   };
+			   
+				   var busStopIcon = L.icon({
+				       iconUrl: '/bus_stop_icon.png',
+				       shadowUrl: '/tri.png',
+				       iconSize:     [32, 32], // size of the icon
+				       shadowSize:   [32, 32], // size of the shadow
+				       iconAnchor:   [16, 16], // point of the icon which will correspond to marker's location
+				       shadowAnchor: [10, 10],  // the same for the shadow
+				       popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+				   });
+			   
+				   var busLocIcon = L.icon({
+				       iconUrl: '/bus_loc.png',
+				       iconSize:     [24, 24], // size of the icon
+				       iconAnchor:   [12, 12], // point of the icon which will correspond to marker's location
+				       popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+				   });
+		
+				   var routeIcon = L.icon({
+				       iconUrl: '/route_marker.png',
+				       iconSize:     [12, 12], // size of the icon
+				       iconAnchor:   [6, 6], // point of the icon which will correspond to marker's location
+				       popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+				   });
+		
+		
+			       //Stops Layer 
+		           var stopies = new L.LayerGroup();
+				   {{#each stops}}
+				        L.marker([ {{stop_lat}}, {{stop_lon}} ],{icon: busStopIcon}).addTo(stopies).on( 'click', onStopClick{{stop_id}} ),
+				   {{/each}}
+		           L.marker([0, -0]).addTo(stopies);
+			   
+				   //Map Points, route line
+		           var map_points = new L.LayerGroup();
+				   {{#each route_map}}
+				        L.marker([ {{shape_pt_lat}}, {{shape_pt_lon}} ], {icon: routeIcon}).bindPopup( '{{shape_dist_traveled}} - {{shape_id}}: {{shape_pt_sequence}}' ).addTo(map_points),
+				   {{/each}}
+		           L.marker([0, -0]).bindPopup('0,0').addTo(map_points);
+			   
+				   //Bus Location Info Layer
+				  
+				   var bus_locations = new L.LayerGroup();
+				   {{#each realbus}}
+				        L.marker([ {{lat}}, {{lon}} ], {icon: busLocIcon}).bindPopup( '{{route_real_id}} - {{headsign}}: {{time_delay}}' ).addTo(bus_locations).on('click', onBusLocClick ),
+				   {{/each}}
+		           L.marker([0, -0]).bindPopup('0,0').addTo(bus_locations);
+			      
+				   
+		           var cmAttr = 'Busr.info Map data &copy; 2011 OpenStreetMap contributors',
+		           cmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+                   var central = new L.LatLng(route_lat, route_lon);
+				   //var map = L.map();
+				   //map.remove();
+			       var map = L.map('map', {
+			           zoom: 13,
+					   center: central, 
+			           layers: [ bus_locations, stopies ]
+					   
+			       });
+				  
+
+			       var overlays = {
+			           "Route Line": map_points,
+					   "Where is Bus?": bus_locations, 
+			           "Stops": stopies
+				   
+			       };
+
+			       L.control.layers( overlays).addTo(map);
+	
+				   L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					            attribution: '© <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+					            maxZoom: 18
+					         }).addTo(map);			
+							
+			
+					// create a red polyline from an arrays of LatLng points
+					var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+					
+
+	             
+			
+				
+	        </script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	
+	//SCHEDULES INFO SCHEDULES INFO SCHEDULES INFO
+	
+    var marker = L.marker([51.5, -0.09]).addTo(map);
+
+	function SortBySequencer(a, b){
+	  //integer sorting algo
+	  return a.sequencer-b.sequencer
+	}
+	
+	
+	function filterStopsInfo(stop_id, stop_name){
+		$("#stop_info_"+stop_id ).html( "<h3>schedule for stop "+stop_id+" '"+stop_name+"'</h3>" );
+		
+		//TODO sort by days
+		var days = sched[0].days;
+		$("#stop_info_"+stop_id ).append( days +" <br /> " );	
+		for(k=0; k<sched.length; k++){    
+			if(days != sched[k].days){
+				//new day and display
+				days = sched[k].days;
+				$("#stop_info_"+stop_id ).append( "<br />"+days +" <br /> " );	
+			}
+			if(sched[k].stop_id == stop_id){
+				//TODO add check to see if sched[k].days is a current day and only display todays schedule. 
+				$("#stop_info_"+stop_id ).append( sched[k].arrival_time +" | " );	
+				
+			}
+		}
+	}
+	
+	
+	
+	function filterStopsTransfers(stop_id, stop_name){
+		$("#stop_transfers_"+stop_id ).html( "<h3>transfers for stop "+stop_id+" '"+stop_name+"'</h3>" );
+        
+		for(k=0; k<trans.length-1; k++){    
+			
+			if(trans[k].stop_id == stop_id){
+				//TODO lookup real route name from trans[k].transfer which is the db route_id index # not the real route number
+				$("#stop_transfers_"+stop_id ).append( trans[k].transfer +" " );	
+				
+			}
+		}
+	}
+
+	
+	
+	var cnt = 0;
+	var trip_id_reference = sched[0].trip_id;
+	var temp_arr = new Array();	
+	var bus_data = new Array();
+
+        $.get( "/IT_busdata.txt", function( resp_data ) {
+            
+			bus_data = [];
+			
+			
+	            var csv = resp_data;
+				var data = csv.split("\n");
+				for(var x=0; x<data.length-1; x++){
+				
+					/*
+	                   busdata.txt sample line: 
+	                   400,13,99,4104,0,-120,874,CBLE,872,46.981174,-122.918282,1402522051,41,4104,0,3005,
+	                   0:trip_id, 1:route_id, 2:unkown, 3:unknown, 4:unknown, 5:time delay, 6:unkwown, 7:headsign, 8:unkown, 9:lat, 10:lon, 11:unkown, 12:unknown, 13:unknown, 14:unknown, 15:unknown, 16:unknown
+					*/
+				
+					d = data[x].split(",");
+					var data_arr = new Array();
+					data_arr["route_real_id"] = d[1];
+					data_arr["time_delay"] = d[5];
+					data_arr["headsign"] = d[7];
+					data_arr["lat"] = d[9];
+					data_arr["lon"] = d[10];
+					//filter to match route_short_name to route_real_id, on sys map take this filter out
+					if(d[1] === '{{route_short_name}}' ){
+						
+					  //realbus.push(data_arr);
+				  	  bus_info.push({
+						  
+				  		  route_real_id: data_arr["route_real_id"],
+				  		  time_delay: data_arr["time_delay"],
+				  		  headsign: data_arr["headsign"] ,
+				  		  lat: data_arr["lat"],
+				  		  lon: data_arr["lon"]
+	
+				  	  });
+					  
+					}
+	                
+				}				
+			
+			console.log("bus info len "+bus_info.length + " "+bus_info[0].lat+ " "+bus_info[0].lon);
+			for(var b=0; b<bus_info.length; b++){
+				L.marker([bus_info[b].lat, bus_info[b].lon], {icon: busLocIcon}).bindPopup( bus_info[b].route_real_id+' - '+bus_info[b].time_delay ).addTo(bus_locations).addTo(map);
+				
+			}
+			//L.marker([bus_info[0].lat, bus_info[0].lon], {icon: busLocIcon}).addTo(map);
+			
+  
+        });
+
+	
+	
+	
+	
+	</script>
+	
+
+
+	
+</div>
+
+
+
+
+
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+

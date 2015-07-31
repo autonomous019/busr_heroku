@@ -1,0 +1,28 @@
+{
+  "name": "busr",
+  "subdomain": "busr",
+  "domains": [
+    "busr.info",
+    "www.busr.info"
+  ],
+  "description": "Busr Transitor, your transit adaptor",
+  "version": "0.0.1-20",
+  "scripts": {
+    "predeploy": "echo starting deployment",
+    "postdeploy": "echo deployment completed",
+    "test": "node_modules/.bin/mocha -w",
+    "start": "web.js"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "hbs": "2.x",
+    "leaflet": "~0.7.2"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "devDependencies": {
+    "should": "~2.1.0"
+  }
+}

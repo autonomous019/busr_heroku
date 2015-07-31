@@ -1,0 +1,954 @@
+stop_id,stop_name,stop_lat,stop_lon,location_type
+1,Capitol at 4th [sb],47.044418,-122.901711,0
+2,Capitol at Legion [sb],47.042889,-122.901489,0
+3,Capitol at 9th [sb],47.040489,-122.901131,0
+4,Capitol at Union [sb],47.039261,-122.900948,0
+5,Capitol at 11th [sb],47.037819,-122.901024,0
+6,Capitol at 15th [sb],47.034363,-122.900848,0
+7,Capitol at 18th [sb],47.032009,-122.900925,0
+8,Capitol at 24th [sb],47.027458,-122.900909,0
+9,Capitol at Eskridge [sb],47.023491,-122.896332,0
+10,Capitol at Carlyon [sb],47.020679,-122.897346,0
+11,Capitol at \"E\" [sb],47.011021,-122.905289,0
+12,Capitol at Linwood [sb],47.007477,-122.90731,0
+13,Linwood at S. 6th [wb],47.007339,-122.912041,0
+14,Linwood at Liberty [wb],47.007389,-122.9216,0
+15,Linwood at Rural [wb],47.007416,-122.925858,0
+16,Rural at 48th [sb],47.00473,-122.926788,0
+17,Rural at Trosper [sb],47.000557,-122.926826,0
+18,Trosper at Western Plaza MHP [eb],46.999836,-122.925148,0
+19,Trosper at Lake Park [eb],46.99987,-122.918144,0
+20,Trosper at Olympics West [eb],46.999912,-122.921021,0
+21,Littlerock at Trosper [sb],46.998329,-122.917,0
+22,Littlerock at Twin County Plaza [sb],46.996742,-122.919014,0
+23,Littlerock at Kingswood [sb],46.994904,-122.921722,0
+24,Tumwater Middle School [sb],46.992085,-122.923538,0
+25,Littlerock at Odegard [sb],46.989471,-122.927231,0
+26,Littlerock at Glenwood [sb],46.987907,-122.929451,0
+27,Israel at Littlerock [eb],46.985409,-122.931084,0
+28,Linderson at Israel [sb],46.98481,-122.918404,0
+29,Labor & Industries Building,46.982967,-122.920601,0
+30,Linderson at Tumwater Blvd [sb],46.981155,-122.918419,0
+31,Littlerock at Miner [nb],46.986614,-122.930817,0
+32,Littlerock at McIver [nb],46.987797,-122.929268,0
+33,Littlerock at Odegard [nb],46.989269,-122.927208,0
+34,Tumwater Middle School [nb],46.991329,-122.92421,0
+35,Littlerock at COSTCO [nb],46.996712,-122.918411,0
+36,Littlerock at Trosper [nb],46.998177,-122.916771,0
+37,Trosper at S. 2nd [wb],47.000038,-122.917259,0
+38,Trosper at Tumwater Mobile Estates [wb],47.000046,-122.921333,0
+39,Trosper at Western Plaza MHP [wb],47.000057,-122.925682,0
+40,Rural at Trosper [nb],47.001152,-122.926659,0
+41,Rural at 48th [nb],47.004875,-122.926651,0
+42,Linwood at Rural [eb],47.007355,-122.925812,0
+43,Linwood at Liberty [eb],47.00732,-122.921646,0
+44,Linwood at Lake Park [eb],47.007263,-122.916656,0
+45,Linwood at S. 6th [eb],47.007206,-122.912399,0
+46,Capitol at Linwood [nb],47.007397,-122.90696,0
+47,Capitol at \"E\" [nb],47.012138,-122.904282,0
+48,Tumwater Square [nb],47.018047,-122.898529,0
+49,Capitol at Carlyon [nb],47.020672,-122.897186,0
+50,Capitol at Eskridge [nb],47.023327,-122.895828,0
+51,Capitol at 24th [nb],47.027813,-122.900734,0
+52,Capitol at 21st [nb],47.030445,-122.900734,0
+53,Capitol at 18th [nb],47.031948,-122.900719,0
+54,Capitol at Maple Park [nb],47.034203,-122.900719,0
+55,Capitol at 11th [nb],47.037231,-122.900703,0
+56,Capitol at Union [nb],47.039383,-122.900749,0
+57,Capitol at 9th [nb],47.041023,-122.901001,0
+58,Capitol at 7th [nb],47.042767,-122.901299,0
+59,Israel at Littlerock Rd [wb],46.985519,-122.931404,0
+60,Littlerock at Kingswood [nb],46.994991,-122.92144,0
+62,Capitol at Israel [nb],46.986286,-122.907394,0
+63,Capitol at Dennis [nb],46.988609,-122.90757,0
+64,Capitol at Courtyard Plaza [nb],46.991398,-122.907547,0
+65,Capitol and \"W\" [nb],46.993717,-122.907478,0
+66,Capitol at \"U\" [nb],46.99522,-122.907471,0
+67,Capitol and E Lee [nb],46.997578,-122.907608,0
+68,Capitol at Capitol 5000 [nb],47.002338,-122.909615,0
+69,Farmers Market,47.050179,-122.902603,0
+70,Capitol at A [nb],47.048546,-122.9021,0
+71,Capitol at A [sb],47.04842,-122.902313,0
+72,Capitol at Southgate Center [sb],47.001022,-122.909439,0
+73,Capitol at W Lee [sb],46.997364,-122.907753,0
+74,Capitol at Pinehurst [sb],46.995487,-122.907738,0
+75,Capitol at Shell Station [sb],46.993561,-122.907761,0
+76,Capitol at Courtyard Plaza [sb],46.991524,-122.907784,0
+77,Capitol at Dennis [sb],46.987572,-122.907867,0
+78,Israel at Indian Creek Apts [wb],46.985485,-122.909538,0
+79,Israel at New Market [wb],46.985474,-122.912682,0
+80,Tumwater High School [wb],46.985531,-122.91629,0
+81,Custer at Schmidt [wb],47.016781,-122.902512,0
+82,S. 2nd at Division [sb],47.015026,-122.906807,0
+83,S. 2nd at \"C\" [sb],47.013714,-122.906845,0
+84,S. 2nd at \"I\" [sb],47.008087,-122.908661,0
+85,S. 7th at \"I\" [nb],47.008842,-122.912842,0
+86,Barnes at Vista [nb],47.015472,-122.915138,0
+87,Barnes at Ridgeview [nb],47.01899,-122.922569,0
+88,SPSCC,47.02322,-122.929222,0
+89,SPSCC Building 34 [wb],47.021366,-122.932938,0
+90,29th and Noble Fir [wb],47.021931,-122.938019,0
+91,RW Johnson at 29th [sb],47.020542,-122.939346,0
+92,Family Court Building,47.017574,-122.942627,0
+93,RW Johnson at Somerset Hill [nb],47.01923,-122.939156,0
+94,RW Johnson at 27th [nb],47.023808,-122.939102,0
+97,RW Johnson at Mottman [nb],47.025543,-122.939156,0
+100,Crosby at Somerset Hill [sb],47.0205,-122.926353,0
+101,Barnes at Ridgeview [sb],47.017628,-122.920486,0
+102,Barnes at Overlook Park [sb],47.016403,-122.918152,0
+103,Barnes at Vista [sb],47.015278,-122.915154,0
+104,S. 7th at \"I\" [sb],47.008472,-122.913048,0
+105,S. 2nd at \"I\" [nb],47.00798,-122.908585,0
+106,S. 2nd at \"C\" [nb],47.013779,-122.906677,0
+107,S. 2nd at Division [nb],47.015377,-122.906654,0
+108,Custer at Schmidt [eb],47.016659,-122.902924,0
+109,North at Masonic Cemetery [eb],47.016563,-122.896492,0
+110,North at Lorne [eb],47.016575,-122.89341,0
+111,North at Pear [eb],47.016541,-122.889053,0
+112,Olympia High School [eb],47.016529,-122.884804,0
+113,North at Central [eb],47.016518,-122.882339,0
+114,Henderson at North [sb],47.01622,-122.879333,0
+115,Henderson at Middle [sb],47.012791,-122.879356,0
+116,Henderson at Briggs [sb],47.007656,-122.881081,0
+117,Henderson at Yelm Hwy [sb],47.005028,-122.881081,0
+118,Yelm Hwy at Village [eb],47.003471,-122.875427,0
+119,Yelm Hwy at Juli [eb],47.004616,-122.86882,0
+120,Yelm Hwy at Boulevard [eb],47.003609,-122.865074,0
+121,Yelm Hwy at Donovan [eb],47.001266,-122.859047,0
+122,Yelm Hwy at Rich [eb],47.000786,-122.855568,0
+123,Yelm Hwy at Chambers Creek [eb],47.000309,-122.852005,0
+124,Yelm Hwy at Wiggins [eb],46.998089,-122.845062,0
+125,Yelm Hwy at Donnelly [eb],46.997005,-122.841431,0
+126,Yelm Hwy at Troon [eb],46.996204,-122.836433,0
+127,Yelm Hwy at Chardonnay [eb],46.996189,-122.833473,0
+129,Yelm Hwy at Sarazan [eb],46.996155,-122.818962,0
+130,Yelm Hwy at Sarazan [wb],46.996342,-122.819496,0
+131,Yelm Hwy at Corporate Center [wb],46.99638,-122.829399,0
+132,Yelm Hiwy at Chardonnay [wb],46.99638,-122.833481,0
+133,Yelm Hwy at Normandy [wb],46.996483,-122.838486,0
+134,Yelm Hwy at Donovan [wb],46.997395,-122.842117,0
+135,Yelm Hwy at Wiggins [wb],46.998268,-122.844978,0
+136,Yelm Hwy at Chambers Creek [wb],47.00053,-122.852295,0
+137,Yelm Hwy at Rich [wb],47.001022,-122.855911,0
+138,Yelm Hwy at Donnelly [wb],47.001564,-122.859985,0
+139,Yelm Hwy at Boulevard [wb],47.004494,-122.866524,0
+140,Yelm Hwy at Juli [wb],47.004795,-122.869469,0
+141,Yelm Hwy at Village [wb],47.003651,-122.875938,0
+142,Henderson at Yelm Hwy [nb],47.005051,-122.880798,0
+143,Henderson at Briggs [nb],47.007668,-122.880814,0
+144,Henderson at Middle [nb],47.013264,-122.879166,0
+145,North at Central [wb],47.016613,-122.882462,0
+146,Olympia High School [wb],47.016624,-122.884239,0
+147,North at Hawthorne [wb],47.016632,-122.887001,0
+148,North at Hoadly [wb],47.01672,-122.890556,0
+149,North at Lorne [wb],47.016647,-122.893089,0
+150,North at Masonic Cemetery [wb],47.016663,-122.8965,0
+151,Friendly Grove at 26th [nb],47.068542,-122.871323,0
+152,26th at Bethel [wb],47.068886,-122.883583,0
+153,Bethel at Brandon [sb],47.067284,-122.884697,0
+154,Bethel at Devon [sb],47.065765,-122.884705,0
+155,Bethel at Miller [sb],47.061703,-122.884796,0
+156,Bethel at Ethridge [sb],47.059883,-122.884811,0
+157,Bethel at San Francisco [sb],47.057686,-122.884888,0
+158,Puget at San Francisco [sb],47.056915,-122.887482,0
+159,Puget at Leavenworth [sb],47.055328,-122.887512,0
+160,Puget at Pine [sb],47.053467,-122.887505,0
+161,Puget at Yew [sb],47.05143,-122.887688,0
+162,Puget at Bigelow [sb],47.049782,-122.887695,0
+163,Puget at Thurston [sb],47.04847,-122.887558,0
+164,State at Eastside [wb],47.046638,-122.889458,0
+165,State at East Bay [wb],47.04636,-122.893753,0
+166,State at Jefferson [wb],47.046181,-122.896439,0
+167,Olympia Transit Center,47.046299,-122.900032,0
+168,4th at Adams [eb],47.045139,-122.897659,0
+169,4th at Pear [eb],47.045513,-122.891594,0
+170,Puget at Thurston [nb],47.048683,-122.887421,0
+171,Puget at Bigelow [nb],47.050018,-122.887512,0
+172,Bigelow at Garrison [eb],47.050098,-122.884239,0
+173,Bigelow at Central [eb],47.050087,-122.881493,0
+174,Fir at Bigelow [nb],47.050385,-122.877304,0
+175,Pine at McCormick [wb],47.053627,-122.878372,0
+176,Pine at Lybarger [wb],47.053638,-122.8806,0
+177,Central at Pine [nb],47.053802,-122.882401,0
+178,Central at Massey [nb],47.058357,-122.882439,0
+179,Central at Ethridge [nb],47.060543,-122.882339,0
+180,Miller at McCormick [eb],47.061958,-122.877533,0
+181,Miller at Ann [eb],47.061943,-122.872742,0
+182,Friendly Grove at Miller [nb],47.064648,-122.871384,0
+183,Lacey Transit Center,47.04266,-122.829559,0
+184,6th at Sleater Kinney [wb],47.043373,-122.831932,0
+185,Sleater Kinney at S. Sound Center [sb],47.04266,-122.83374,0
+186,Sleater Kinney at Pacific [sb],47.040241,-122.833839,0
+187,Sleater Kinney at 12th [sb],47.037552,-122.83387,0
+188,Sleater Kinney at 14th [sb-near side],47.034832,-122.833862,0
+189,14th at Capitol Club Apts [wb],47.034306,-122.837654,0
+190,14th at Colonial Estates MHP [wb],47.034328,-122.841873,0
+191,18th at Fones [wb],47.032581,-122.848152,0
+192,18th at Craig [wb],47.032612,-122.855186,0
+193,18th at Kempton [wb],47.032639,-122.853119,0
+194,18th at Allen [wb],47.032604,-122.857399,0
+195,18th at Amhurst [wb],47.032639,-122.859169,0
+196,18th at Karen Frazier [wb],47.032585,-122.862526,0
+197,Boulevard at 18th [nb],47.033062,-122.866539,0
+198,Boulevard at 15th [nb],47.036503,-122.868622,0
+199,Boulevard at 12th [nb],47.039108,-122.868988,0
+200,Boulevard at Union [nb],47.041031,-122.868973,0
+201,9th at Sawyer [wb],47.041775,-122.870995,0
+202,Frederick at Union [sb],47.040428,-122.871742,0
+203,Union at Fairview [wb],47.039936,-122.874344,0
+204,Union at Lybarger [wb],47.040146,-122.880066,0
+205,10th at Central [wb],47.041019,-122.882431,0
+206,10th at St. Michaels [wb],47.040871,-122.886391,0
+207,Eastside at 9th [nb],47.041813,-122.887863,0
+208,8th at Pear [wb],47.042236,-122.891243,0
+209,8th at Chestnut [wb],47.042046,-122.894142,0
+210,8th at Adams [wb],47.041809,-122.897789,0
+211,Franklin at Legion [nb],47.043613,-122.898926,0
+212,Franklin at Legion [sb],47.043194,-122.899017,0
+213,8th at Franklin [eb],47.041618,-122.898262,0
+214,8th at Chestnut [eb],47.041927,-122.893776,0
+215,8th at Pear [eb],47.042141,-122.891052,0
+216,Eastside at 8th [sb],47.041866,-122.888039,0
+217,10th at St. Michaels [eb],47.040836,-122.885902,0
+218,10th at Central [eb],47.040951,-122.882553,0
+219,Union at Lybarger [eb],47.04007,-122.879982,0
+220,Union at Fairview [eb],47.039856,-122.873825,0
+221,Frederick at Union [nb],47.040565,-122.871628,0
+222,9th at Frederick [nb],47.041637,-122.871124,0
+223,Boulevard at Union [sb],47.040741,-122.869156,0
+224,Boulevard at 12th [sb],47.038673,-122.869148,0
+225,Boulevard at 15th [sb],47.03656,-122.868881,0
+226,Boulevard at 18th [sb],47.033218,-122.867249,0
+227,18th at Karen Frazier [eb],47.032673,-122.86248,0
+228,18th at Amhurst [eb],47.032562,-122.859703,0
+229,18th at Allen [eb],47.032528,-122.857361,0
+230,18th at Craig [eb],47.032494,-122.855362,0
+231,18th at Kempton [eb],47.032471,-122.852386,0
+232,18th at Hoffman [eb],47.032425,-122.848602,0
+233,Elizabeth at Chambers Lake Way [nb],47.032845,-122.844193,0
+234,14th at Colonial Estates MHP [eb],47.034199,-122.84124,0
+235,14th at Capitol Club Apts [eb],47.034191,-122.83744,0
+236,Sleater Kinney at 14th [nb],47.034641,-122.833717,0
+237,Sleater Kinney at Lacey Blvd [nb],47.037941,-122.833687,0
+238,Sleater Kinney at Pacific [nb],47.039879,-122.833679,0
+239,Sleater Kinney at 7th [nb],47.041882,-122.833649,0
+241,TESC Library Loop,47.071983,-122.977127,0
+242,Evergreen Pkwy at Overhulse [eb],47.069763,-122.969688,0
+243,Kaiser at Driftwood [eb],47.071907,-122.955559,0
+244,Kaiser at Cedrona [eb],47.073605,-122.95208,0
+245,Kaiser at College Court Apts [eb],47.075268,-122.9496,0
+246,Kaiser at Cooper Point [eb],47.075539,-122.944206,0
+247,Cooper Point at 29th [sb],47.073669,-122.943047,0
+248,28th at Cooper Point [eb],47.071133,-122.941612,0
+249,28th at Division [eb],47.071125,-122.93541,0
+250,Division at 26th [sb],47.069016,-122.931183,0
+251,Division at Butler Cove Apts [sb],47.066357,-122.929459,0
+252,Division at Burbank [sb],47.064888,-122.929001,0
+253,Division at Elliott [sb],47.063358,-122.928459,0
+254,Division at Muirhead [sb],47.059704,-122.925819,0
+255,Division at Walnut [sb],47.05735,-122.925659,0
+256,Division at Dickinson [sb],47.054939,-122.925636,0
+257,Division at Bowman [sb],47.053246,-122.925652,0
+258,Division at Conger [sb],47.051334,-122.925758,0
+259,Division at Madison [sb],47.049561,-122.925842,0
+260,Division at Garfield [sb],47.047375,-122.925919,0
+261,Harrison at Division [eb],47.04591,-122.92511,0
+262,Harrison at Decatur [eb],47.045887,-122.92276,0
+263,Harrison at Plymouth [eb],47.045826,-122.91864,0
+264,Harrison at Foote [eb],47.045776,-122.915245,0
+265,5th at Sylvester [eb],47.043804,-122.905312,0
+266,Columbia at State [nb],47.046032,-122.903,0
+267,5th at Sylvester [wb],47.043808,-122.905922,0
+268,5th at Deschutes [wb],47.043652,-122.908066,0
+269,Harrison at Foote [wb],47.045925,-122.916389,0
+270,Harrison at Rogers [wb],47.04594,-122.918617,0
+271,Harrison at Perry [wb],47.046009,-122.920486,0
+272,Harrison at Decatur [wb],47.046043,-122.922813,0
+273,Division at Harrison [nb],47.046608,-122.925781,0
+274,Division at Madison [nb],47.049675,-122.925682,0
+275,Division at Giles [nb],47.052151,-122.925583,0
+276,Division at Bowman [nb],47.053398,-122.925522,0
+277,Division at Dickinson [nb],47.055042,-122.925484,0
+278,Division at Farwell [nb],47.0569,-122.925491,0
+279,Division at Muirhead [nb],47.059467,-122.925591,0
+280,Division at Elliott [nb],47.063606,-122.928436,0
+281,Division at Burbank [nb],47.064941,-122.928879,0
+282,Division at Butler Cove [nb],47.06673,-122.929367,0
+283,Division at 26th [nb],47.069408,-122.931328,0
+284,28th at Division [wb],47.071201,-122.935577,0
+285,28th at Cooper Point [wb],47.071369,-122.941582,0
+286,Cooper Point at 29th [nb],47.073429,-122.942833,0
+287,Kaiser at Cooper Point [wb],47.075661,-122.943939,0
+288,Kaiser at College Court Apts [wb],47.075165,-122.949989,0
+289,Kaiser at Cedrona [wb],47.073982,-122.951782,0
+290,Maple Park at Jefferson [wb],47.034004,-122.896332,0
+291,Driftwood at TESC Maintenance [wb],47.074699,-122.957558,0
+292,Driftwood at Wildcurrant [wb],47.075668,-122.968384,0
+293,Driftwood at Overhulse [wb],47.076084,-122.970367,0
+294,TESC Dorms,47.075333,-122.97345,0
+295,Driftwood at Overhulse [eb],47.076077,-122.970757,0
+296,Driftwood at Wildcurrant [eb],47.07563,-122.967941,0
+297,Overhulse at Driftwood [sb],47.075047,-122.964378,0
+298,Overhulse at Fireweed [sb],47.071434,-122.969719,0
+299,Evergreen Pkwy at Overhulse [wb],47.070045,-122.970047,0
+300,County Courthouse [nb],47.029396,-122.913193,0
+301,Deschutes at Lakeridge [nb],47.032581,-122.910362,0
+302,Deschutes at mansion [nb],47.040829,-122.914253,0
+303,Deschutes at Marathon Park [nb],47.037399,-122.913101,0
+304,Deschutes at Percival Cove [nb],47.034657,-122.91143,0
+305,Maple Park at Capitol Way [eb],47.033676,-122.900131,0
+306,Maple Park at Franklin [eb],47.033653,-122.897896,0
+307,Jefferson at Maple Park [nb],47.034317,-122.895653,0
+308,Jefferson at 13th [nb],47.036991,-122.895721,0
+309,Jefferson at 11th [nb],47.038445,-122.895775,0
+310,Jefferson at Union [nb],47.039623,-122.895821,0
+311,Jefferson at 9th [nb],47.041191,-122.895737,0
+312,Eastside at 12th [sb],47.037937,-122.887451,0
+313,Jefferson at 10th [sb],47.040306,-122.896088,0
+314,Jefferson at 11th [sb],47.038269,-122.895988,0
+315,Jefferson at 13th [sb],47.03669,-122.895973,0
+316,Maple Park at Franklin,47.033886,-122.89798,0
+317,Maple Park at Capitol [wb],47.033886,-122.899529,0
+318,Deschutes at Percival Cove [sb],47.034538,-122.911545,0
+319,Deschutes at Marathon Park [sb],47.037308,-122.913193,0
+320,Deschutes at mansion [sb],47.040833,-122.914383,0
+321,Deschutes at Lakeridge [sb],47.032539,-122.910522,0
+322,County Courthouse [sb],47.02832,-122.913414,0
+323,Capital Mall Station,47.042419,-122.932526,0
+324,Kenyon at 4th [nb],47.04504,-122.934212,0
+325,Harrison at Kenyon [wb],47.046291,-122.934715,0
+326,Harrison at Key Bank [wb],47.047184,-122.938583,0
+327,Cooper Point at Safeway Plaza [sb],47.045471,-122.941406,0
+328,Cooper Point at 12th [sb],47.036835,-122.939331,0
+329,Cooper Point at Black Lake [eb],47.034149,-122.93734,0
+330,Cooper Point at Central Park Villa [eb],47.031845,-122.935051,0
+331,Cooper Point at Carriage [eb],47.029808,-122.932541,0
+332,Crosby at Mottman [sb],47.023388,-122.923279,0
+333,Crosby at Mottman [nb],47.023041,-122.922981,0
+334,Evergreen Park at S. Evergreen Park [eb],47.028385,-122.92231,0
+335,Evergreen Park at Sherwood Glen Apts [eb],47.03043,-122.919243,0
+336,Evergreen Park at Heritage Park Apts [eb],47.030777,-122.917374,0
+337,Evergreen Park at Westlake Apts [eb],47.029842,-122.915283,0
+338,S. Evergreen Park at 24th [nb],47.028,-122.914902,0
+339,Evergreen Park at Capitol Lake Towers [wb],47.030083,-122.915237,0
+340,Evergreen Park at Heritage Park Apts [wb],47.030853,-122.916817,0
+341,Evergreen Park at Broadmoor West [wb],47.030727,-122.919006,0
+342,Evergreen Park at S. Evergreen Park [wb],47.028427,-122.922684,0
+343,Cooper Point at Carriage [wb],47.030457,-122.933105,0
+344,Cooper Point at Westhills Park II [wb],47.032261,-122.935143,0
+345,Cooper Point at Black Lake [wb],47.033688,-122.936241,0
+346,Cooper Point at 12th [nb],47.037704,-122.939018,0
+347,Cooper Point at Capital Mall Dr [nb],47.041138,-122.939102,0
+348,Capital Medical Center,47.041843,-122.951859,0
+349,McPhee at Capital Mall Dr [nb],47.043438,-122.952988,0
+350,McPhee at Harrison [nb],47.046566,-122.953011,0
+351,Yauger at Harrison [sb],47.046192,-122.94986,0
+353,Yauger at 5th [sb],47.043438,-122.949829,0
+354,Capitol Mall Dr at Courtside [eb],47.041267,-122.948959,0
+355,Capitol Mall Dr at Archwood W [eb],47.039837,-122.945236,0
+356,Capitol Mall Dr at Archwood E [eb],47.039806,-122.942726,0
+357,Capitol Mall Dr at Cooper Point [eb],47.039825,-122.940376,0
+358,Cooper Point at Capital Village [nb],47.045109,-122.941109,0
+359,Cooper Point at Harrison [nb],47.047611,-122.941109,0
+360,Cooper Point at Conger [nb],47.051979,-122.941116,0
+361,Conger at Wily [eb],47.051514,-122.938065,0
+362,Capital High School [eb],47.051567,-122.933632,0
+363,Conger at Cardigan [eb],47.051544,-122.931381,0
+364,Jefferson Middle School [eb],47.051514,-122.928108,0
+365,Bowman at Milroy [eb],47.053543,-122.922783,0
+366,Bowman at Rogers [eb],47.053535,-122.91909,0
+367,Rogers at Conger [sb],47.051083,-122.918526,0
+368,Rogers at Jackson [sb],47.048252,-122.917854,0
+369,Garfield at Plymouth [wb],47.047249,-122.919495,0
+370,Rogers at Harrison [nb],47.046242,-122.917801,0
+371,Rogers at Jackson [nb],47.048664,-122.917732,0
+372,Rogers at Conger [nb],47.050812,-122.918411,0
+373,Bowman at Rogers [wb],47.053593,-122.918938,0
+374,Bowman at Milroy [wb],47.053612,-122.922707,0
+375,Jefferson Middle School [wb],47.051632,-122.927948,0
+376,Conger at Cardigan [wb],47.051651,-122.932358,0
+377,Capital High School [wb],47.051632,-122.934532,0
+378,Conger at Wily [wb],47.051582,-122.938454,0
+379,Conger at Cooper Point [wb],47.051586,-122.940239,0
+380,Cooper Point at Conger [sb],47.051037,-122.94133,0
+381,Cooper Point at Capital Mall Dr [sb],47.04039,-122.939339,0
+382,Elizabeth and 14th [sb],47.033562,-122.844345,0
+383,Capitol Mall Dr at Apple Park [wb],47.039959,-122.942322,0
+384,Capitol Mall Dr at Alta [wb],47.039951,-122.944725,0
+385,Capitol Mall Dr at Courtside [wb],47.041393,-122.948868,0
+386,Harrison at Kenyon [eb],47.046066,-122.933212,0
+387,Harrison at Sherwin-Williams [eb],47.046024,-122.928795,0
+388,Division at Harrison [sb],47.045525,-122.925987,0
+389,Black Lake at 4th [sb],47.043957,-122.926796,0
+390,Black Lake at Westfield Mall entrance [sb],47.041821,-122.929405,0
+391,9th at Black Lake [eb],47.039787,-122.930801,0
+392,9th at Fern [eb],47.03978,-122.92823,0
+393,9th at Village Garden Apts [eb],47.039791,-122.926071,0
+394,Decatur at 9th [nb],47.040039,-122.92263,0
+395,Decatur at 7th [nb],47.041958,-122.922569,0
+396,5th at Decatur [eb],47.04343,-122.922287,0
+397,5th at Thomas [eb],47.043449,-122.920532,0
+398,5th at Rogers [eb],47.043404,-122.918129,0
+399,Sherman at 4th [nb],47.044121,-122.914688,0
+400,Sherman at 4th [sb],47.044174,-122.914848,0
+401,5th at Percival [wb],47.043465,-122.916878,0
+402,5th at Plymouth [wb],47.043514,-122.920151,0
+403,Decatur at 5th [sb],47.043297,-122.922646,0
+404,Decatur at 7th [sb],47.041763,-122.922707,0
+405,Decatur at 9th [sb],47.040199,-122.92276,0
+406,9th at Cushing [wb],47.03989,-122.925232,0
+407,9th at Soroya [wb],47.039886,-122.928284,0
+408,9th at Black Lake [wb],47.039902,-122.930557,0
+409,Black Lake at Capital Place [nb],47.041454,-122.929466,0
+410,Black Lake at 4th [nb],47.044048,-122.926392,0
+411,Harrison at Division [wb],47.046131,-122.926704,0
+412,Harrison at Shell Station [wb],47.0462,-122.930717,0
+413,Cooper Point at 20th [sb],47.063457,-122.94191,0
+414,Cooper Point at 14th [sb],47.058468,-122.941284,0
+415,Cooper Point at Sarah [sb],47.053818,-122.941322,0
+416,Cooper Point at Sarah [nb],47.053932,-122.941193,0
+417,Cooper Point at Walnut [nb],47.057724,-122.941124,0
+418,Cooper Point at 20th [nb],47.063377,-122.941711,0
+422,Legion at Eastside [eb],47.04409,-122.887741,0
+423,Legion at Boundary [eb],47.044353,-122.884499,0
+424,Pacific at Sleater Kinney [wb],47.039497,-122.834724,0
+425,Pacific at South Sound Way [wb],47.040222,-122.837776,0
+426,Pacific at Music 6000 [wb],47.040878,-122.840462,0
+427,Pacific at Weir [wb],47.041462,-122.842598,0
+430,Lilly at Mary Elder [nb],47.048542,-122.844353,0
+431,Lilly at Ensign [nb],47.050781,-122.844315,0
+432,Lilly at Memorial Medical Plaza [nb],47.053486,-122.844307,0
+433,Lilly at 12th [nb],47.056915,-122.844322,0
+434,Group Health Building,47.057659,-122.84182,0
+435,Lilly at 12th [sb],47.055721,-122.844498,0
+436,Lilly at Providence St. Peter [sb],47.053181,-122.84449,0
+437,Ensign at Lilly [wb],47.051086,-122.844902,0
+438,Ensign at St. Peter Emergency [wb],47.051109,-122.847969,0
+439,Ensign at Providence [wb],47.050388,-122.85128,0
+440,Martin Way at Animal Services [wb],47.046577,-122.855141,0
+441,Martin Way at Pattison [wb],47.046345,-122.85984,0
+442,Martin Way at Phoenix [wb],47.04615,-122.862999,0
+443,Pacific at Phoenix [wb],47.044971,-122.865967,0
+444,Boulevard at 7th [sb],47.043922,-122.869186,0
+445,Lions Park [wb],47.043591,-122.87252,0
+446,7th at Fairview [wb],47.043549,-122.87603,0
+447,Legion at McCormick [wb],47.044415,-122.878693,0
+448,Legion at Boundary [wb],47.044357,-122.885269,0
+449,Legion at Eastside [wb],47.044117,-122.888664,0
+453,Legion at McCormick [eb],47.044312,-122.878654,0
+454,7th at Fairview [eb],47.043476,-122.875946,0
+455,Lions Park [eb],47.043495,-122.872635,0
+456,Boulevard at 7th [nb],47.043835,-122.869011,0
+457,Pacific at Chambers [eb],47.045242,-122.867836,0
+458,Martin Way at Phoenix [eb],47.045898,-122.864059,0
+459,Martin Way at Pattison [eb],47.046158,-122.859848,0
+460,Martin Way at The Bark Store [eb],47.046425,-122.855179,0
+461,Ensign at Providence [eb],47.050556,-122.850609,0
+462,Ensign at Ensign Medical Center [eb],47.05101,-122.847321,0
+463,Ensign at Lilly [eb],47.050957,-122.845085,0
+464,Lilly at Ensign [sb],47.050861,-122.844536,0
+465,Lilly at Mary Elder [sb],47.048733,-122.844612,0
+468,Pacific at Poplar [eb],47.0411,-122.841972,0
+469,Pacific at DeTrays [eb],47.040394,-122.839355,0
+470,Pacific at South Sound Way [eb],47.0396,-122.835945,0
+471,7th at Fred Meyer Center [eb],47.04184,-122.831696,0
+472,Panorama Center,47.030621,-122.833679,0
+473,Lakewood Station [nb],47.152485,-122.498695,0
+474,Lakewood Station [sb],47.152714,-122.498947,0
+475,Yelm Ave at Tahoma Blvd [eb],46.947662,-122.617165,0
+476,Yelm Ave at Killion [wb],46.94817,-122.617851,0
+477,Golf Club at 19th [sb],47.029564,-122.82859,0
+478,Golf Club at 16th [sb],47.032295,-122.828583,0
+479,Golf Club at 14th [sb],47.034477,-122.828583,0
+480,4th at Eastside [eb],47.045799,-122.88826,0
+481,4th at Boundary [eb],47.046021,-122.884827,0
+482,4th at Central [eb],47.045998,-122.881363,0
+483,4th at McCormick [eb],47.04599,-122.878708,0
+484,4th at Fairview [eb],47.045998,-122.87532,0
+485,4th at Pacific [eb],47.045933,-122.868591,0
+486,Martin Way at Bailey Inn [eb],47.046844,-122.849213,0
+487,Martin Way at Lilly [eb],47.047176,-122.843498,0
+488,Martin Way at 3775 [eb],47.047394,-122.840538,0
+489,Martin Way at Sleater Kinney [eb],47.047699,-122.835854,0
+490,7th at Aaron's [wb],47.041924,-122.831848,0
+491,Martin Way at College [eb],47.048359,-122.825928,0
+492,Martin Way at Desmond [eb],47.049381,-122.808685,0
+493,Martin Way at 6127 Martin [eb],47.049976,-122.800652,0
+494,Martin Way at Carpenter [eb],47.050381,-122.795975,0
+495,Martin Way at Kinwood [eb],47.051495,-122.790207,0
+496,Martin Way at Tanglewilde Village [eb],47.052513,-122.785301,0
+497,Martin Way at Ranger [eb],47.05312,-122.782036,0
+498,Martin Way at Kingham [eb],47.054272,-122.776421,0
+499,Martin Way at Martin Way Plaza [eb],47.055046,-122.772614,0
+500,Martin Way at Marvin [eb],47.056561,-122.763527,0
+501,Martin Way at Wildwood MHP [eb],47.05764,-122.758827,0
+502,Martin Way at Hoh [eb],47.05859,-122.754929,0
+503,Martin Way at Ranchotel [eb],47.059013,-122.752296,0
+504,River Ridge High School [eb],47.059658,-122.749237,0
+505,Martin Way at A-1 Auto Repair [eb],47.060429,-122.744453,0
+506,Meridian at 4th [nb],47.063099,-122.741013,0
+515,Martin Way at Marvin [wb],47.056641,-122.766022,0
+516,Martin Way at Blue Moon MHP [wb],47.05513,-122.773323,0
+517,Martin Way at Kingham [wb],47.054165,-122.778252,0
+518,Martin Way at Hensley [wb],47.053005,-122.784012,0
+519,Martin Way at Franz Bakery [wb],47.052441,-122.786865,0
+520,Martin Way at 5780 Martin [wb],47.050198,-122.800766,0
+521,Martin Way at Desmond [wb],47.049591,-122.810699,0
+522,Martin Way at Martin Way P&R [wb],47.049297,-122.814919,0
+523,Martin Way at College [wb],47.048637,-122.825409,0
+524,Martin Way at Martin Way Station [wb],47.048237,-122.831253,0
+525,Martin Way at Sleater Kinney [wb],47.047955,-122.835564,0
+526,Martin Way at Casa Madrona [wb],47.047729,-122.838051,0
+527,Martin Way at 3700 [wb],47.047516,-122.842041,0
+528,Martin Way at Lilly [wb],47.047298,-122.845215,0
+529,Martin Way at Mary Elder [wb],47.04705,-122.84845,0
+530,4th at Chambers [wb],47.046139,-122.86895,0
+531,Pacific at Sawyer [wb],47.046432,-122.872009,0
+532,State at Turner [wb],47.046963,-122.876755,0
+533,State at McCormick [wb],47.046978,-122.879692,0
+534,State at Central [wb],47.046925,-122.88298,0
+535,State at Bethel [wb],47.04689,-122.884964,0
+536,Marvin at Martin Way,47.0546,-122.764755,0
+537,Marvin at 3rd [sb],47.052624,-122.764755,0
+538,Marvin at Steilacoom [sb],47.048115,-122.764893,0
+539,Steilacoom at Marvin [eb],47.046989,-122.763069,0
+540,Steilacoom at Lava [eb],47.047947,-122.756393,0
+541,Steilacoom at Pine Crest [eb],47.049221,-122.752151,0
+542,Steilacoom at Flemming [eb],47.051022,-122.746773,0
+543,Deerbrush at Steilacoom [sb],47.051468,-122.741669,0
+544,Deerbush at 7th [sb],47.049606,-122.741119,0
+545,Deerbrush at Meadows ES [sb],47.047722,-122.741631,0
+546,Deerbrush at Pinedrop [sb],47.046879,-122.742432,0
+547,Deerbrush at Shadberry [sb],47.04475,-122.744675,0
+548,Deerbrush at Rockcress [sb],47.042534,-122.744347,0
+549,Deerbrush at Clover [sb],47.040512,-122.742813,0
+550,Deerbrush at Goldenrod [sb],47.03915,-122.742233,0
+551,Rockcress at Deerbrush [sb],47.03812,-122.741142,0
+552,Rockcress at Pacific [sb],47.037079,-122.74276,0
+553,Pacific Hwy at Rockcress,47.036552,-122.745438,0
+554,Pacific Hwy at Chatham [wb],47.036915,-122.750854,0
+555,Pacific Hwy at 15th [wb],47.037033,-122.758278,0
+556,Pacific at Sitka [wb],47.038052,-122.760956,0
+557,Marvin at 9th [nb],47.040215,-122.764824,0
+558,Marvin at 8th [nb],47.043224,-122.764801,0
+559,Marvin at Steilacoom [nb],47.048157,-122.764565,0
+560,Marvin at 3rd [nb],47.052654,-122.764465,0
+561,Marvin at Martin Way [nb],47.055065,-122.76442,0
+562,Pacific at Phoenix [eb],47.044327,-122.864143,0
+563,Pacific at Devoe [eb],47.043407,-122.861534,0
+564,Pacific at Pattison [eb],47.042675,-122.857635,0
+565,Pacific at Fones [eb],47.041695,-122.845863,0
+566,6th at Golf Club [eb],47.043251,-122.827782,0
+567,6th at College [eb],47.043213,-122.823883,0
+568,College at Woodland Square [sb],47.040508,-122.823387,0
+569,College at Pacific [sb],47.03841,-122.82341,0
+570,College at 14th [sb],47.033894,-122.82338,0
+571,College at 15th [sb],47.032425,-122.823364,0
+572,College at 17th [sb],47.030518,-122.823387,0
+573,College at 22nd [sb],47.028015,-122.823387,0
+574,College at 23rd [sb],47.026131,-122.823395,0
+575,College at 26th [sb],47.023613,-122.82338,0
+576,College at 29th [sb],47.020939,-122.823341,0
+577,College at Montclair [sb],47.018734,-122.823273,0
+578,College at 33rd [sb],47.017128,-122.823273,0
+579,College at 37th [sb],47.014042,-122.823341,0
+580,College at 39th [sb],47.011219,-122.823265,0
+581,College at 45th [sb],47.006069,-122.823334,0
+582,College at Lacey Park Apts [sb],47.00322,-122.823364,0
+583,College at Corporate Center Dr [sb],47.000809,-122.823326,0
+584,College at Yelm Hwy [sb],46.998051,-122.823349,0
+586,Yelm Hwy at Parkside [eb],46.996143,-122.815002,0
+587,Yelm Hwy at Titleist [eb],46.996075,-122.80912,0
+588,Yelm Hwy at Ruddell [sb],46.994247,-122.807335,0
+589,Yelm Hwy at Balustrade [eb],46.99144,-122.801102,0
+590,Amtrak Station,46.991245,-122.794434,0
+591,Yelm Hwy at Compton [wb],46.991379,-122.799866,0
+592,Yelm Hwy at Ruddell [nb],46.994492,-122.807198,0
+593,Yelm Hwy at Mt. Olympus [wb],46.996288,-122.811607,0
+594,Yelm Hwy at Parkside [wb],46.996334,-122.815666,0
+595,College at Yelm Hwy [nb],46.997982,-122.823021,0
+596,College at Firwood Grove [nb],47.001648,-122.823036,0
+597,College at Lacey Park Apts [nb],47.003246,-122.823036,0
+598,College at College Pointe Apts [nb],47.006008,-122.823029,0
+599,College at 45th [nb],47.008144,-122.823067,0
+600,College at 39th [nb],47.011417,-122.823051,0
+601,College at 37th [nb],47.014648,-122.823029,0
+602,College at College Park [nb],47.017178,-122.823097,0
+603,College at 31st [nb],47.019146,-122.823105,0
+604,College at Belair [nb],47.020962,-122.823151,0
+605,College at 26th [nb],47.024139,-122.823212,0
+606,College at 24th [nb],47.026253,-122.823219,0
+607,College at 22nd [nb],47.02803,-122.823189,0
+608,College at 18th [nb],47.030766,-122.823189,0
+609,College at 16th [nb],47.032379,-122.823196,0
+610,College at 14th [nb],47.034168,-122.823189,0
+611,College at Pacific [nb],47.037964,-122.823135,0
+612,College at Woodland Square [nb],47.040432,-122.823166,0
+613,6th at College [wb],47.043377,-122.825142,0
+614,6th at Golf Club [wb],47.04335,-122.828293,0
+615,Pacific at Lilly [wb],47.041931,-122.845009,0
+616,Pacific at Pattison [wb],47.04298,-122.858276,0
+617,Pacific at Devoe [wb],47.043522,-122.861206,0
+618,Ruddell at 14th [sb],47.033638,-122.818047,0
+619,Ruddell at 16th [sb],47.031456,-122.817169,0
+620,Ruddell at 19th [sb],47.029873,-122.815483,0
+621,Ruddell at 22nd [sb],47.026775,-122.812141,0
+622,25th at Sycamore [eb],47.025105,-122.809975,0
+623,25th at Angela [eb],47.025078,-122.808136,0
+624,25th at 25th Loop [eb],47.02507,-122.805893,0
+625,Lilac at Shady Lane [nb],47.026493,-122.804115,0
+626,22nd at Lilac [wb],47.02795,-122.804451,0
+627,Creek at Yelm Ave [sb],46.933773,-122.590164,0
+628,22nd at Sycamore [wb],47.027786,-122.812035,0
+629,Ruddell at 27th [sb],47.02322,-122.810532,0
+630,Ruddell at 30th [sb],47.020569,-122.810326,0
+631,Ruddell at Ruddell Loop [sb],47.017479,-122.810112,0
+632,Ruddell at Koala [sb],47.014324,-122.808792,0
+633,Ruddell at 39th [sb],47.012272,-122.808708,0
+634,Ruddell at 40th Ct [sb],47.00967,-122.808685,0
+635,Ruddell at 45th [sb],47.007408,-122.808411,0
+636,Ruddell at 50th [sb],47.002171,-122.807648,0
+637,Ruddell at 54th [sb],46.999496,-122.807419,0
+638,Ruddell at Yelm Hwy [sb],46.996914,-122.807442,0
+639,Corporate Center at College [wb],47.000614,-122.824089,0
+640,Corporate Center at Intelco N [wb],46.999992,-122.827309,0
+641,Corporate Center at Intelco S [sb],46.997944,-122.828812,0
+642,Ruddell at Yelm Hwy [nb],46.996998,-122.807213,0
+643,Ruddell at 54th [nb],47.000053,-122.807098,0
+644,Ruddell at 50th [nb],47.003345,-122.807785,0
+645,Ruddell at 45th [nb],47.007553,-122.808128,0
+646,Ruddell at Mullen [nb],47.009598,-122.808449,0
+647,Ruddell at 39th [nb],47.012394,-122.808502,0
+648,Ruddell at 37th [nb],47.014675,-122.808746,0
+649,Ruddell at 32nd Ct [nb],47.018089,-122.810226,0
+650,Ruddell at 30th [nb],47.020927,-122.810165,0
+651,Ruddell at 27th [nb],47.023403,-122.81041,0
+652,Ruddell at 22nd,47.028027,-122.813271,0
+653,Ruddell at Gemini [nb],47.030174,-122.815567,0
+654,Ruddell at 16th [nb],47.031994,-122.817451,0
+655,Ruddell at 14th [nb],47.033672,-122.817879,0
+656,Ruddell at Pacific [nb],47.036449,-122.817886,0
+657,Golf Club at 10th  [sb],47.039009,-122.828751,0
+659,Lacey Blvd at Lacey Village [eb],47.036388,-122.825615,0
+660,Lacey Blvd at Violet [eb],47.03548,-122.821678,0
+661,Lacey Blvd at Church [eb],47.034786,-122.816513,0
+662,Lacey Blvd at Alder [eb],47.035309,-122.813576,0
+663,Lacey Blvd at Lebanon [eb],47.035908,-122.810127,0
+664,Lacey Blvd at Clearbrook [eb],47.036381,-122.80748,0
+665,Carpenter at Pacific [sb],47.037014,-122.800758,0
+667,Carpenter at Diamond [eb],47.033707,-122.797852,0
+668,Carpenter at Roo-Lan [sb],47.032726,-122.791512,0
+669,Carpenter at Sierra [sb],47.030483,-122.79158,0
+670,Carpenter at Holmes Island [sb],47.026966,-122.791634,0
+671,Carpenter at Long Lake Park [sb],47.022655,-122.791649,0
+672,Carpenter at Stanfield [sb],47.019558,-122.788261,0
+673,Carpenter at Carpenter Lp [sb],47.019516,-122.784065,0
+674,Carpenter at Vista Village [sb],47.016735,-122.780853,0
+675,Carpenter at 38th [sb],47.012741,-122.780777,0
+676,Carpenter at 41st [sb],47.009811,-122.780701,0
+677,Carpenter at 45th [sb],47.006992,-122.780563,0
+678,Carpenter at Mullen [sb],47.005058,-122.780464,0
+679,Mullen at Timberline Dr [wb],47.005451,-122.784668,0
+680,Mullen at Glen Terra [wb],47.005047,-122.787979,0
+681,Mullen at Rumac [wb],47.00452,-122.790604,0
+682,Mullen at Fire Station [wb],47.004471,-122.79644,0
+683,Timberline High School [wb],47.006615,-122.800415,0
+684,Mullen at Ruddell [wb],47.008671,-122.804451,0
+685,Mullen at Ruddell [eb],47.008991,-122.806976,0
+686,Timberline High School [eb],47.006519,-122.801262,0
+687,Mullen at Fire Station [eb],47.004387,-122.796623,0
+688,Mullen at Rumac [eb],47.004391,-122.790588,0
+689,Mullen at Glen Terra [eb],47.005001,-122.787849,0
+690,Mullen at Timberline Dr [eb],47.005173,-122.783691,0
+692,Carpenter at 45th [nb],47.006943,-122.780342,0
+693,Carpenter at 41st [nb],47.009773,-122.780579,0
+694,Carpenter at 38th [nb],47.012386,-122.780632,0
+695,Carpenter at Vista Village [nb],47.016815,-122.780769,0
+696,Carpenter at Carpenter Lp [nb],47.019588,-122.784264,0
+697,Carpenter at Stanfield [nb],47.019627,-122.788124,0
+698,Carpenter at Long Lake Park [nb],47.023209,-122.791489,0
+699,Carpenter at Holmes Island [nb],47.027168,-122.791489,0
+700,Carpenter at Sierra [nb],47.030521,-122.791405,0
+701,Carpenter at Roo-Lan [nb],47.03297,-122.791298,0
+702,Carpenter at Diamond [nb],47.033882,-122.797005,0
+703,Pacific at Carpenter [wb],47.037624,-122.80127,0
+704,Golf Club at 10th [nb],47.039387,-122.828598,0
+705,Adams at State [sb],47.04538,-122.898087,0
+706,Adams at Legion [sb],47.043266,-122.897758,0
+707,Union at Jefferson [eb],47.039276,-122.894951,0
+708,Union at Eastside [eb],47.039776,-122.887901,0
+709,Eastside at 18th [sb],47.032784,-122.886978,0
+710,22nd at Boundary [eb],47.029537,-122.883629,0
+711,22nd at Fir [eb],47.029373,-122.876648,0
+712,22nd at Cain [eb],47.029358,-122.874184,0
+713,22nd at Nut Tree [eb],47.02903,-122.870392,0
+715,22nd at Boulevard [eb],47.028969,-122.866676,0
+716,Boulevard at Holly [sb],47.027328,-122.865211,0
+717,Boulevard at Fox [sb],47.025143,-122.86525,0
+718,Washington Middle School [sb],47.020359,-122.865257,0
+719,Boulevard at Morse-Merryman [sb],47.018406,-122.86525,0
+720,Boulevard at 36th [sb],47.016079,-122.865311,0
+721,Boulevard at 42nd [sb],47.009747,-122.865349,0
+722,Wilderness at Boulevard [eb],47.007946,-122.863823,0
+723,Yelm Hwy at Fair Oaks [eb],46.986069,-122.777657,0
+724,Yelm Hwy at Spurgeon Creek [eb],46.984516,-122.768219,0
+725,Yelm Hwy at Meridian [eb],46.985474,-122.741859,0
+726,Yelm Hwy at Johnson [eb],46.985245,-122.722519,0
+727,Yelm Hwy at Rehklau [eb],46.98698,-122.716965,0
+728,Yelm Hwy at Braywood W [eb],46.993645,-122.706551,0
+729,Yelm Hwy at Ruth [eb],47.004292,-122.69799,0
+730,Yelm Hwy at SR 510 [eb],47.007702,-122.690712,0
+731,Yelm Hwy at Braywood E [eb],46.999065,-122.701584,0
+732,Red Wind Casino [sb],47.000729,-122.667282,0
+734,Yelm Hwy at Southworth ES [sb],46.970852,-122.642532,0
+735,Yelm Hwy at Mudd Run [sb],46.965363,-122.633987,0
+736,Yelm Ave at Burnett [eb],46.953209,-122.627388,0
+737,Yelm Ave at 93rd [eb],46.951996,-122.625198,0
+738,Yelm High School [eb],46.950176,-122.621857,0
+739,Yelm Ave at Cullens [eb],46.946091,-122.614243,0
+740,Yelm Ave at Edwards [eb],46.943256,-122.609039,0
+741,Yelm Ave at 3rd [eb],46.940807,-122.604584,0
+742,7th ave,47.042149,-122.830154,0
+743,7th ave,47.041943,-122.83046,0
+744,Creek at Yelm Post Office [sb],46.935574,-122.590088,0
+745,Yelm Ave at Edwards [wb],46.943485,-122.609177,0
+746,Yelm Ave at Cullens [wb],46.946869,-122.615379,0
+747,Yelm High School [wb],46.95031,-122.621864,0
+748,Yelm Ave at 93rd [wb],46.952366,-122.62561,0
+749,Yelm Ave at Burnett [nb],46.953648,-122.627953,0
+750,Yelm Hwy at Mudd Run [nb],46.964096,-122.63266,0
+751,Yelm Hwy at Southworth ES [nb],46.970352,-122.641357,0
+753,Red Wind Casino [nb],47.001316,-122.66835,0
+754,Yelm Hwy at Braywood E [wb],46.998947,-122.702057,0
+755,Yelm Hwy at SR 510 [wb],47.00782,-122.69075,0
+756,Yelm Hwy at Gallup [wb],47.004517,-122.697922,0
+757,Yelm Hwy at Braywood W [wb],46.993378,-122.707047,0
+758,Yelm Hwy at Rehklau [wb],46.986645,-122.717812,0
+759,Yelm Hwy at Lake St. Clair [wb],46.985306,-122.723213,0
+760,Yelm Hwy at Meridian [wb],46.985584,-122.740562,0
+761,Yelm Hwy at Spurgeon Creek [wb],46.984776,-122.769424,0
+762,Yelm Hwy at Fair Oaks [wb],46.986286,-122.778,0
+763,Tumwater Blvd at Terminal [eb],46.980572,-122.909622,0
+764,22nd at Fir [wb],47.029469,-122.876923,0
+765,22nd at Boundary [wb],47.029625,-122.883545,0
+766,22nd at Myrtle [wb],47.029057,-122.866447,0
+767,22nd at Brown [wb],47.029076,-122.870079,0
+768,22nd at Wilson [wb],47.029453,-122.873863,0
+769,Adams at Legion [nb],47.043686,-122.89769,0
+770,Adams at 4th [nb],47.045391,-122.897911,0
+771,Boulevard at 24th [nb],47.027859,-122.865051,0
+772,Boulevard at 28th [nb],47.025005,-122.865044,0
+773,Boulevard at 31st Ct [nb],47.020386,-122.865074,0
+774,Boulevard at Morse-Merryman [nb],47.018555,-122.865128,0
+775,Boulevard at 41st [nb],47.009361,-122.86512,0
+776,Boulevard at Log Cabin [nb],47.0159,-122.865128,0
+777,Wilderness at Boulevard [wb],47.008022,-122.863838,0
+778,Eastside at 18th [nb],47.033062,-122.88678,0
+779,Eastside at 12th [nb],47.037769,-122.88726,0
+780,Union at Eastside [wb],47.039909,-122.888168,0
+781,Union at Cherry [wb],47.039513,-122.893967,0
+782,Union at Plum [wb],47.039719,-122.890892,0
+783,Black Lake at Abalon Pointe Apts [nb],47.042439,-122.928322,0
+784,Crosby at Westbury Lane [nb],47.020882,-122.926132,0
+785,Barnes at Blue Sky [nb],47.01651,-122.918335,0
+786,Kaiser at Driftwood [wb],47.072102,-122.95575,0
+787,Linwood at \"G\" [wb],47.00737,-122.916389,0
+788,Yelm Ave at 3rd [nb],46.940556,-122.603867,0
+789,Sleater Kinney at 21st [nb],47.028259,-122.833702,0
+790,Israel at Linderson [eb],46.985336,-122.920609,0
+791,Evergreen Park Dr at Evergreen Park  [wb],47.029633,-122.920708,0
+792,Evergreen Park Dr and Evergreen Park [eb],47.029202,-122.920914,0
+793,Martin Way at Galaxy [eb],47.055901,-122.768341,0
+794,Martin Way at K-Mart [eb],47.047974,-122.8311,0
+795,Martin Way Park & Ride,47.04987,-122.815125,0
+796,4th at Simmons [wb],47.044563,-122.907219,0
+797,State at Columbia [wb],47.045712,-122.902855,0
+798,4th at Simmons [eb],47.044472,-122.906227,0
+799,Israel at Linderson [wb],46.985485,-122.920067,0
+800,Deschutes at 5th [nb],47.043091,-122.91098,0
+801,Deschutes at 5th [sb],47.043198,-122.910957,0
+802,5th at Deschutes [eb],47.043552,-122.907532,0
+803,Cooper Point at Caton [wb],47.029358,-122.927917,0
+804,Cooper Point at Caton [eb],47.029179,-122.928986,0
+805,St. Francis House,47.055569,-122.847511,0
+806,Wilderness at 2811 [eb],47.007645,-122.860291,0
+807,Wilderness at Wilderness Loop [eb],47.007359,-122.856461,0
+808,Wilderness at Donnelly [eb],47.005367,-122.852486,0
+809,Donnelly at Canady [eb],47.004131,-122.852814,0
+810,Donnelly at Edgeworth [eb],47.003017,-122.848259,0
+811,Donnelly at Wiggins [eb],47.002705,-122.844627,0
+812,Yelm Ave at Prairie Park [nb],46.939079,-122.601128,0
+813,Donnelly at Wiggins [wb],47.002819,-122.845367,0
+814,Donnelly at Edgeworth [wb],47.00309,-122.848885,0
+815,Donnelly at Canady [wb],47.004501,-122.852646,0
+816,Wilderness at Donnelly [wb],47.005386,-122.852371,0
+817,Wilderness at Wilderness Ct [wb],47.007446,-122.856514,0
+818,Wilderness at 2808 [wb],47.007664,-122.860428,0
+819,Pacific at Carpenter [eb],47.037693,-122.799782,0
+820,Pacific at Lake Lois [eb],47.040192,-122.793915,0
+821,Pacific at Kinwood [eb],47.040901,-122.790932,0
+822,Pacific at Ranger [eb],47.041801,-122.78476,0
+823,Pacific at Union Mills [eb],47.042088,-122.780685,0
+824,Pacific at Skyridge [eb],47.040279,-122.775269,0
+825,Pacific at Marvin [eb],47.039371,-122.767441,0
+826,Marvin at Scarlet Oak [sb],47.037067,-122.765022,0
+827,Marvin at 19th [sb],47.029663,-122.764946,0
+828,Marvin at 25th [sb],47.024654,-122.767471,0
+829,Lake Forest at Fordham [sb],47.020279,-122.762253,0
+831,Lake Forest at Lake Forest Ct [eb],47.014221,-122.762154,0
+832,Lake Forest at Carnegie [eb],47.013985,-122.759026,0
+833,Marvin at 44th [sb],47.0075,-122.754448,0
+834,Marvin at Mullen [sb],47.003784,-122.754494,0
+835,Mullen at Indian Summer [eb],47.003193,-122.75045,0
+836,Tri-Lake Drive at Tri-Lake Loop [sb],47.001751,-122.741707,0
+837,Mullen at Tri-Lake [wb],47.003269,-122.742226,0
+838,Mullen at Indian Summer Dr [wb],47.003277,-122.750221,0
+839,Marvin at Mullen [nb],47.003742,-122.754318,0
+840,Marvin at 44th [nb],47.007748,-122.75428,0
+841,Lake Forest at Carnegie [wb],47.014099,-122.759109,0
+842,Lake Forest at Creighton [wb],47.013912,-122.760078,0
+843,Lake Forest at Marquette [nb],47.017235,-122.762924,0
+844,Lake Forest at Fordham [nb],47.019779,-122.762749,0
+845,Marvin at Terri [nb],47.026348,-122.766808,0
+846,Marvin at 19th [nb],47.029587,-122.764725,0
+847,Marvin at Sweetbriar [nb],47.035713,-122.764755,0
+848,Pacific at Marvin [wb],47.039543,-122.769989,0
+849,Pacific at Oakcrest [wb],47.040565,-122.775818,0
+850,Pacific at Steilacoom [wb],47.041935,-122.779694,0
+851,Pacific at Ranger [wb],47.041824,-122.785614,0
+852,Pacific at Kinwood [wb],47.041004,-122.791916,0
+853,Pacific at Lake Lois [wb],47.0401,-122.794533,0
+854,Pacific at Bowker [wb],47.037071,-122.810318,0
+855,Pacific at St. Martin's College [wb],47.037224,-122.816391,0
+856,Pacific at College [wb],47.037716,-122.824982,0
+857,Lacey Wal-Mart [sb],47.059944,-122.769531,0
+858,4th at Chestnut [eb],47.04533,-122.89447,0
+866,Black Lake at Ken Lake [nb],47.030373,-122.94313,0
+867,Capitol at 21st [sb],47.029892,-122.900917,0
+868,Capitol at State [nb],47.046001,-122.901756,0
+869,Columbia at State [sb],47.045914,-122.90316,0
+870,Lacey Blvd at Ruddell [eb],47.034779,-122.818703,0
+871,Legion at Central [eb],47.044315,-122.881401,0
+872,Legion at Central [wb],47.044395,-122.881287,0
+873,Israel at Old Israel [eb],46.985725,-122.926323,0
+874,Israel at Old Israel [wb],46.985832,-122.926559,0
+875,Tumwater Blvd at New Market [eb],46.979607,-122.91552,0
+876,Pacific at Webb [wb],47.037319,-122.82151,0
+877,Miller and Marion (eb),47.062,-122.882004,0
+878,Kenyon at Harrison [sb],47.045155,-122.934387,0
+879,Tumwater Blvd at Cleanwater [eb],46.982109,-122.906944,0
+880,Marvin at 15th [sb],47.033249,-122.764954,0
+881,Marvin at 15th [nb],47.033424,-122.764687,0
+882,Marvin at Walthew [sb],47.021301,-122.764069,0
+883,Marvin at Walthew [nb],47.022781,-122.766029,0
+884,Lake Forest at Oxford [eb],47.014175,-122.755539,0
+885,Lake Forest at Oxford [wb],47.014435,-122.756104,0
+886,Martin Way at Carpenter [wb],47.050507,-122.797203,0
+887,Martin Way at Kinwood [wb],47.051441,-122.791901,0
+889,21st and Black Lake Apts [wb],47.029034,-122.94223,0
+890,North at Henderson [wb],47.016636,-122.879791,0
+891,S. 2nd at \"F\" [sb],47.011009,-122.906807,0
+892,S. 2nd at \"F' [nb],47.011539,-122.906647,0
+893,Tumwater Square [sb],47.018105,-122.898788,0
+894,State Capitol Building [sb],47.036331,-122.90387,0
+895,General Administration Building [wb],47.038109,-122.902817,0
+896,Newhouse Building,47.035404,-122.902916,0
+898,Pacific at Ulery [eb],47.036892,-122.804474,0
+899,Nisqually Plaza [wb],46.936256,-122.595825,0
+900,Galaxy at Martin Way [nb],47.058037,-122.769066,0
+901,Corporate Center at Tiffani Lane [eb],47.000011,-122.826118,0
+902,Marvin at 22nd [sb],47.027576,-122.766487,0
+903,Sleater Kinney at Circle Lane [nb],47.032833,-122.833694,0
+904,Golf Club at 21st [sb],47.028503,-122.828575,0
+905,Yelm Hwy at Rainer [eb],46.996136,-122.822212,0
+906,Balustrade at 66th [eb],46.987671,-122.803368,0
+907,Balustrade at 66th [wb],46.987644,-122.80394,0
+908,Littlerock at Miner [sb],46.986214,-122.931755,0
+909,Puget at State [nb],47.047134,-122.887215,0
+910,Yelm Hwy at Englewood [eb},46.98539,-122.746277,0
+911,Yelm Hwy at Englewood [wb],46.985561,-122.747147,0
+912,Yelm Ave at 103rd [wb],46.938148,-122.599365,0
+913,Nisqually Plaza [eb],46.936508,-122.59671,0
+914,SR507 at Morris [eb],46.933117,-122.589821,0
+915,103rd at Grove [wb],46.938183,-122.584053,0
+916,103rd at Creek [wb],46.938354,-122.589211,0
+917,Wiggins at Landview [nb],47.001354,-122.844299,0
+918,Union at Fir [eb],47.040058,-122.876999,0
+919,Union at Fir [wb],47.040138,-122.876999,0
+920,Yelm Ave at Clark [eb],46.939091,-122.601501,0
+921,Balustrade at Radius [eb],46.985168,-122.81076,0
+922,Yelm Hwy at Henderson [eb],47.003433,-122.87999,0
+923,7th at Woodland Square Loop [eb],47.041397,-122.826782,0
+924,7th at Woodland Square Loop [wb],47.041492,-122.826836,0
+925,Woodland Square Loop at 6th [wb],47.042622,-122.82473,0
+926,Woodland Square Loop at 6th [eb],47.042534,-122.825386,0
+927,Pacific Hwy at Bridgeport [nb],47.149563,-122.503662,0
+929,SR512 Park & Ride,47.160919,-122.483109,0
+930,Tacoma Mall Transit Station,47.214142,-122.469872,0
+931,Tacoma Dome Station,47.24073,-122.426147,0
+932,Pacific at State History Museum [nb],47.244919,-122.436363,0
+933,Pacific at S. 15th [nb],47.249882,-122.437721,0
+934,Commerce at S. 10th [nb],47.253807,-122.439606,0
+935,Commerce at S. 10th [sb],47.253494,-122.439445,0
+936,Pacific at S. 14th [sb],47.250053,-122.438034,0
+937,Pacific at UW Tacoma [sb],47.24493,-122.436897,0
+938,Pacific at 25th [sb],47.239243,-122.435593,0
+939,Capitol at Tumwater Blvd [nb],46.984818,-122.906647,0
+940,Friendly Grove at Friendly Grove Park [nb],47.065872,-122.871368,0
+941,4th at Water [eb],47.044594,-122.904648,0
+942,RW Johnson at 29th [nb],47.022209,-122.93914,0
+944,Ruddell at Rainier Vista Park [sb],47.00362,-122.808075,0
+945,Ruddell at 25th [nb],47.024975,-122.810623,0
+946,Pacific at Auto Zone [wb],47.038204,-122.798637,0
+947,Pacific at Ulery [wb],47.036938,-122.805008,0
+948,Wiggins at Yelm Hwy [sb],46.999268,-122.844414,0
+949,Wiggins at Yelm Hwy [nb],46.999306,-122.844284,0
+950,Capitol at 14th [sb],47.035168,-122.900932,0
+951,Capitol at Olympia [sb],47.046349,-122.902,0
+952,Sid Snyder at Capitol [wb],47.035526,-122.902046,0
+953,Insurance Building,47.035507,-122.903046,0
+954,State Capitol Building [nb],47.036697,-122.903725,0
+955,General Adminstration Building [eb],47.038029,-122.902512,0
+956,11th at Capitol [eb],47.037971,-122.900017,0
+957,11th at Franklin [eb],47.03796,-122.89859,0
+959,11th at Franklin [wb],47.038101,-122.898117,0
+960,11th at Capitol [wb],47.038094,-122.900421,0
+961,14th at Capitol [eb],47.035473,-122.901375,0
+962,Capitol at 5th [nb],47.04417,-122.90152,0
+964,Yelm Hwy at Ronald Lane [eb],46.996174,-122.825798,0
+965,Pacific at 24th [nb],47.2402,-122.435455,0
+966,Cooper Point at Harrison [sb],47.048779,-122.941422,0
+967,S. 7th at Ebbets [sb],47.011322,-122.913025,0
+970,Meridian at Orion [nb],47.068291,-122.741417,0
+971,Meridian at Quinault [sb],47.063934,-122.741608,0
+972,Martin Way at Meridian,47.061504,-122.741478,0
+973,River Ridge High School [wb],47.059921,-122.749229,0
+974,Martin Way at Blackhawk [wb],47.059132,-122.753288,0
+975,Martin Way at Hoh [wb],47.058609,-122.755936,0
+976,Martin Way at Wildwood MHP [wb],47.057945,-122.759171,0
+977,Martin Way at Best Buy [wb],47.057434,-122.761833,0
+978,Galaxy at Martin Way [sb],47.057102,-122.769287,0
+979,Rainier at Whitman [sb],46.995049,-122.823334,0
+980,Rainier at 66th [sb],46.988659,-122.823135,0
+981,Balustrade at Compass [eb],46.986858,-122.819992,0
+982,Balustrade at Prism [eb],46.986866,-122.816299,0
+983,Balustrade at Flute [eb],46.985909,-122.813156,0
+984,Balustrade at Ruddell [eb],46.986481,-122.806015,0
+985,Balustrade at Delaware [eb],46.989891,-122.800179,0
+986,Balustrade at Delaware [wb],46.99012,-122.800323,0
+987,Balustrade at Ruddell [wb],46.986729,-122.806015,0
+988,Balustrade at Breeze [wb],46.985401,-122.811516,0
+989,Balustrade at Prism [wb],46.987053,-122.816048,0
+990,Balustrade at Compass [wb],46.987057,-122.819763,0
+991,Rainier at 66th [nb],46.98893,-122.823006,0
+992,Rainier at Rainier Loop [nb],46.994686,-122.823105,0
+994,Corporate Center at Yelm Hwy [nb],46.996948,-122.828445,0
+995,Corporate Center at College [eb],47.00034,-122.824356,0
+996,Tumwater Blvd at Israel [eb],46.983456,-122.904518,0
+997,Israel at Nikolas,46.985458,-122.904114,0
+998,S. 5th at Linwood [nb],47.007507,-122.910431,0
+999,Yelm Wal-Mart,46.933628,-122.579292,0
+1006,4th at Wilson [eb],47.045883,-122.872383,0
+1007,Hawk's Prairie Park & Ride,47.067722,-122.76342,0
+1008,College at Martin Way [sb],47.047287,-122.823303,0
+1010,Tumwater Blvd and Cleanwater,46.98196,-122.90773,0

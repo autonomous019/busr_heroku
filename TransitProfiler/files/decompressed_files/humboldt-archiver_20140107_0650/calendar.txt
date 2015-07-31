@@ -1,0 +1,15 @@
+service_id,service_name,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+6A981,"Weekend service",0,0,0,0,0,1,0,20120101,20140101
+5A981,"Weekday service",1,1,1,1,1,0,0,20120101,20140101
+8A1062,"Weekday service",1,1,1,1,1,0,0,20130101,20150101
+9A1062,"Weekend service",0,0,0,0,0,1,0,20130101,20150101
+10A387,"Summer weekday schedule",1,1,1,1,1,0,0,20110515,20110816
+813A1219,"Weekdays starting August 19th (So Hum)",1,1,1,1,1,0,0,20130818,20150101
+901A1585,"Weekdays starting Jan 19th",1,1,1,1,1,0,0,20140119,20150101
+902A1586,"Weekdays ending Jan 18th",1,1,1,1,1,0,0,20130101,20140118
+786A1220,"Saturdays ending August 17th",0,0,0,0,0,1,0,20130101,20130817
+787A1220,"Weekdays ending August 17th",1,1,1,1,1,0,0,20130101,20130817
+789A1220,"Sundays ending August 17th",0,0,0,0,0,0,1,20130101,20130817
+790A1219,"Sundays starting August 18th",0,0,0,0,0,0,1,20130818,20150101
+791A1219,"Saturday starting August 19th",0,0,0,0,0,1,0,20130818,20150101
+792A1219,"Weekdays starting August 19th",1,1,1,1,1,0,0,20130818,20150101

@@ -1,0 +1,170 @@
+<h3>{{agency_name}} System Map</h3>
+ 
+ 
+{{ route_map.length }}
+ 
+ <style>
+ #map {
+ 	position: absolute;
+    text-position: center;
+ 
+ 	height: 50%;
+ 	width: 70%;
+ 	z-index: 1;
+ }
+ 
+ 
+ <style>
+ .leaflet-control-command{
+ 	background-image: url('/bus_stop_icon.png');
+	
+ }
+ 
+ 
+ 
+ .leaflet-control-layers-toggle:after{ 
+	 background-image: url('/bus_stop_icon.png');
+     content:" "; 
+     color:#000 ;
+	 width: 50px;
+	 height: 50px;
+	 background-position: 50% 50%;
+	 background-repeat: no-repeat;
+	 display: block;
+	 padding: 3px;
+	 border-radius: 4px;
+	 -webkit-border-radius: 4px;
+	 -moz-border-radius: 4px;
+	 box-shadow: 0 1px 7px rgba(0, 0, 0, 0.65);
+	 cursor: auto;
+	 text-align: center;
+	 background-color: #FFFFFF;
+  }
+
+  .leaflet-control-layers-toggle:hover
+	 {
+	     background-color: #F4F4F4;
+	 }
+ .leaflet-control-layers-toggle{ 
+     width:auto;
+     background-position:3px 50% ;
+     padding:0px;
+    
+     text-decoration:none;
+     line-height:36px;
+
+ }
+ </style>
+ 
+ </style>
+ 
+<div id="latlng"></div>
+<div id='map'></div>
+	
+  
+ 
+        <script type="text/javascript">
+
+	var latlngs = new Array();
+		
+	{{#each route_map}}
+		    latlngs.push(new L.LatLng( {{shape_pt_lat}}, {{shape_pt_lon}} ));
+		    
+		
+		{{/each}}
+		
+		      
+		
+			   var geojsonMarkerOptions = {
+			       radius: 3,
+			       fillColor: "#ff7800",
+			       color: "#000",
+			       weight: 1,
+			       opacity: 1,
+			       fillOpacity: 0.8
+			   };
+			   
+
+		
+			   var routeIcon = L.icon({
+			       iconUrl: '/route_marker.png',
+			       shadowUrl: '/tri.png',
+			       iconSize:     [12, 12], // size of the icon
+			       shadowSize:   [12, 12], // size of the shadow
+			       iconAnchor:   [6, 6], // point of the icon which will correspond to marker's location
+			       shadowAnchor: [6, 6],  // the same for the shadow
+			       popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+			   });
+		
+
+ 
+	          
+			   
+	           var map_points = new L.LayerGroup();
+			   
+			   {{#each route_map}}
+			        L.marker([ {{shape_pt_lat}}, {{shape_pt_lon}} ], {icon: routeIcon}).bindPopup( '{{shape_dist_traveled}} - {{shape_id}}: {{shape_pt_sequence}}' ).addTo(map_points),
+			   {{/each}}
+ 
+	           L.marker([0, -0]).bindPopup('0,0').addTo(map_points);
+			   
+	           var cmAttr = 'Busr.info Map data &copy; 2011 OpenStreetMap contributors',
+	           cmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+
+	           var minimal   = L.tileLayer(cmUrl, {attribution: cmAttr}),
+	           midnight  = L.tileLayer(cmUrl, { attribution: cmAttr}),
+	           motorways = L.tileLayer(cmUrl, {attribution: cmAttr});
+
+		       var map = L.map('map', {
+		           zoom: 10,
+		           layers: [minimal, motorways]
+		       });
+
+		       var baseLayers = {
+		           "Minimal": minimal,
+		           "Transfers": midnight
+		       };
+
+		       var overlays = {
+		           "Route Line": map_points
+		       };
+
+		       L.control.layers(baseLayers, overlays).addTo(map);
+	
+			   L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				            attribution: '© <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+				            maxZoom: 18
+				         }).addTo(map);			
+	 
+			    var onLocationFound = function(e) {
+					var radius = e.accuracy / 2;
+					//$("#latlng").text(e.latlng);
+					L.marker(e.latlng).addTo(map)
+						.bindPopup("Me: " + e.latlng).openPopup();
+
+					L.circle(e.latlng, radius).addTo(map);
+				}
+
+			    var onLocationError = function(e) {
+				    $("#latlng").text("ERROR: "+e.message);
+					
+				}
+			
+				// create a red polyline from an arrays of LatLng points
+				var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+						
+			  map.on('locationfound', onLocationFound);
+			  map.on('locationerror', onLocationError);
+			  map.locate({setView: true, zoom: 13, maxZoom: 13});
+	     
+			
+				
+        </script>
+
+
+<br /><br /><br /><br />
+
+<br /><br /><br /><br />
+
+
+

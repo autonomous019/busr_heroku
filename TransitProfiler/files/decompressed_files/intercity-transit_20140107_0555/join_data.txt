@@ -1,0 +1,246 @@
+michael-mccarrons-MacBook-Pro:lib michaelmccarron$ redis-cli KEYS '*' > current_keys.txt
+michael-mccarrons-MacBook-Pro:lib michaelmccarron$ vi current_keys.txt
+
+
+In view get route_id then retrieve trips for route via trips.route_id then get stops from stop_times via stop_times.trip_id and stop_times.stop_id then get stop.lon and stop.lat to display on map. 
+
+
+need to get stops for a trip_id set get from stop_times_<trip_id> where stops for a trip_id are part of the set
+michael-mccarrons-MacBook-Pro:lib michaelmccarron$ redis-cli HGETALL 'Intercity_Transit:stop_times_1191_109'
+ 1) "trip_id"
+ 2) "1191"
+ 3) "stop_id"
+ 4) "109"
+ 5) "arrival_time"
+ 6) "9:43:26"
+ 7) "departure_time"
+ 8) "9:43:26"
+ 9) "stop_sequence"
+10) "13"
+11) "shape_dist_traveled"
+12) "3.80817513485"
+13) "stop_headsign"
+14) ""
+15) "pickup_type"
+16) ""
+17) "drop_off_type"
+18) ""
+michael-mccarrons-MacBook-Pro:lib michaelmccarron$ redis-cli HGETALL 'Intercity_Transit:trip_1191'
+ 1) "trip_id"
+ 2) "1191"
+ 3) "route_id"
+ 4) "18"
+ 5) "service_id"
+ 6) "1"
+ 7) "trip_headsign"
+ 8) "Outbound"
+ 9) "block_id"
+10) "6802"
+11) "shape_id"
+12) "15"
+13) "short_name"
+14) ""
+15) "direction_id"
+16) ""
+17) "wheelchair_accessible"
+
+michael-mccarrons-MacBook-Pro:lib michaelmccarron$ redis-cli HGETALL 'Intercity_Transit:route_18'
+ 1) "route_id"
+ 2) "18"
+ 3) "route_short_name"
+ 4) "68"
+ 5) "route_long_name"
+ 6) "Yelm Hwy/Carpenter Rd"
+ 7) "route_type"
+ 8) "3"
+ 9) "route_agency_id"
+10) ""
+11) "route_desc"
+12) ""
+13) "route_url"
+14) ""
+15) "route_color"
+16) ""
+17) "route_text_color"
+18) ""18) ""
+
+
+
+michael-mccarrons-MacBook-Pro:lib michaelmccarron$ redis-cli HGETALL 'Intercity_Transit:stop_109'
+ 1) "stop_id"
+ 2) "109"
+ 3) "stop_name"
+ 4) "North at Masonic Cemetery [eb]"
+ 5) "stop_lat"
+ 6) "47.016563"
+ 7) "stop_lon"
+ 8) "-122.896492"
+ 9) "stop_code"
+10) ""
+11) "stop_desc"
+12) ""
+13) "stop_zone_id"
+14) ""
+15) "stop_url"
+16) ""
+17) "stop_location_type"
+18) ""
+19) "stop_parent_station"
+20) ""
+21) "stop_timezone"
+22) ""
+23) "stop_wheelchair_boarding"
+24) ""
+
+
+
+michael-mccarrons-MacBook-Pro:lib michaelmccarron$ redis-cli HGETALL 'Intercity_Transit:stop_times_2045_818'
+ 1) "trip_id"
+ 2) "2045"
+ 3) "stop_id"
+ 4) "818"
+ 5) "arrival_time"
+ 6) "17:17:28"
+ 7) "departure_time"
+ 8) "17:17:28"
+ 9) "stop_sequence"
+10) "49"
+11) "shape_dist_traveled"
+12) "31.1115485318"
+13) "stop_headsign"
+14) ""
+15) "pickup_type"
+16) ""
+17) "drop_off_type"
+18) ""
+
+
+michael-mccarrons-MacBook-Pro:lib michaelmccarron$ redis-cli HGETALL 'Intercity_Transit:trip_2045'
+ 1) "trip_id"
+ 2) "2045"
+ 3) "route_id"
+ 4) "20"
+ 5) "service_id"
+ 6) "1"
+ 7) "trip_headsign"
+ 8) "Inbound"
+ 9) "block_id"
+10) "9403"
+11) "shape_id"
+12) "9"
+13) "short_name"
+14) ""
+15) "direction_id"
+16) ""
+17) "wheelchair_accessible"
+18) ""
+
+
+
+michael-mccarrons-MacBook-Pro:lib michaelmccarron$ redis-cli SMEMBERS 'Intercity_Transit_stop_times_349'
+data written is stops for this trip, ie. 349 trip_id
+
+ 1) "167"
+ 2) "241"
+ 3) "242"
+ 4) "243"
+ 5) "244"
+ 6) "245"
+ 7) "246"
+ 8) "247"
+ 9) "248"
+10) "249"
+11) "250"
+12) "251"
+13) "252"
+14) "253"
+15) "254"
+16) "255"
+17) "256"
+18) "257"
+19) "258"
+20) "259"
+21) "260"
+22) "261"
+23) "262"
+24) "263"
+25) "264"
+26) "798"
+27) "868"
+28) "941"
+
+
+
+michael-mccarrons-MacBook-Pro:lib michaelmccarron$ redis-cli HGETALL 'Intercity_Transit:trip_349'
+ 1) "trip_id"
+ 2) "349"
+ 3) "route_id"
+ 4) "7"
+ 5) "service_id"
+ 6) "3"
+ 7) "trip_headsign"
+ 8) "Inbound"
+ 9) "block_id"
+10) "4101"
+11) "shape_id"
+12) "0"
+13) "short_name"
+14) ""
+15) "direction_id"
+16) ""
+17) "wheelchair_accessible"
+18) ""
+
+$agency_id+"_stop_times_"+trip_id
+‘Intercity_Transit_stop_times_349
+
+$agency_id+"_trips", trip_id+"_"+route_id
+‘Intercity_Transit_trips’ 349 7
+
+get Intercity_Transit_trips to get all trips for a route then get all stops from ‘Intercity_Transit_stop_times_<trip_id>’
+
+redis-cli SMEMBERS 'Intercity_Transit_trips_7’ gets all trips for a route as INT by trip_id
+
+
+michael-mccarrons-MacBook-Pro:TransitProfiler michaelmccarron$ redis-cli LINDEX 'Intercity_Transit_stops_to_route_7' 0
+"{\"stop_id\"=>\"797\", \"stop_name\"=>\"State at Columbia [wb]\", \"stop_lat\"=>\"47.045712\", \"stop_lon\"=>\"-122.902855\", \"stop_code\"=>\"\", \"stop_desc\"=>\"\", \"stop_zone_id\"=>\"\", \"stop_url\"=>\"\", \"stop_location_type\"=>\"\", \"stop_parent_station\"=>\"\", \"stop_timezone\"=>\"\", \"stop_wheelchair_boarding\"=>\"\"}"
+michael-mccarrons-MacBook-Pro:TransitProfiler michaelmccarron$ redis-cli LINDEX 'Intercity_Transit_stops_to_route_7' 1
+"{\"stop_id\"=>\"796\", \"stop_name\"=>\"4th at Simmons [wb]\", \"stop_lat\"=>\"47.044563\", \"stop_lon\"=>\"-122.907219\", \"stop_code\"=>\"\", \"stop_desc\"=>\"\", \"stop_zone_id\"=>\"\", \"stop_url\"=>\"\", \"stop_location_type\"=>\"\", \"stop_parent_station\"=>\"\", \"stop_timezone\"=>\"\", \"stop_wheelchair_boarding\"=>\"\"}"
+michael-mccarrons-MacBook-Pro:TransitProfiler michaelmccarron$ 
+
+Failed to add file TransitProfiler/routing/ to index.
+
+
+
+SCHEDULE STUFF
+Outbound
+{"trip_id"=>"959", "stop_id"=>"167", "arrival_time"=>"20:15:00", "departure_time"=>"20:15:00", "stop_sequence"=>"0", "shape_dist_traveled"=>"0.0", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"269", "arrival_time"=>"20:18:44", "departure_time"=>"20:18:44", "stop_sequence"=>"3", "shape_dist_traveled"=>"1.4936880899", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"270", "arrival_time"=>"20:19:13", "departure_time"=>"20:19:13", "stop_sequence"=>"4", "shape_dist_traveled"=>"1.66270965378", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"271", "arrival_time"=>"20:19:38", "departure_time"=>"20:19:38", "stop_sequence"=>"5", "shape_dist_traveled"=>"1.80476357243", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"272", "arrival_time"=>"20:20:08", "departure_time"=>"20:20:08", "stop_sequence"=>"6", "shape_dist_traveled"=>"1.98115009816", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"323", "arrival_time"=>"20:28:00", "departure_time"=>"20:28:00", "stop_sequence"=>"12", "shape_dist_traveled"=>"4.7427501443", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"325", "arrival_time"=>"20:23:10", "departure_time"=>"20:23:10", "stop_sequence"=>"9", "shape_dist_traveled"=>"2.88651666657", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"326", "arrival_time"=>"20:24:16", "departure_time"=>"20:24:16", "stop_sequence"=>"10", "shape_dist_traveled"=>"3.19717741241", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"327", "arrival_time"=>"20:25:18", "departure_time"=>"20:25:18", "stop_sequence"=>"11", "shape_dist_traveled"=>"3.58519203685", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"411", "arrival_time"=>"20:21:00", "departure_time"=>"20:21:00", "stop_sequence"=>"7", "shape_dist_traveled"=>"2.27640285073", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"412", "arrival_time"=>"20:22:05", "departure_time"=>"20:22:05", "stop_sequence"=>"8", "shape_dist_traveled"=>"2.5809921569", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"796", "arrival_time"=>"20:16:40", "departure_time"=>"20:16:40", "stop_sequence"=>"2", "shape_dist_traveled"=>"0.676571114089", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"959", "stop_id"=>"797", "arrival_time"=>"20:15:38", "departure_time"=>"20:15:38", "stop_sequence"=>"1", "shape_dist_traveled"=>"0.254199200535", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+
+Inbound
+{"trip_id"=>"960", "stop_id"=>"167", "arrival_time"=>"19:40:00", "departure_time"=>"19:40:00", "stop_sequence"=>"11", "shape_dist_traveled"=>"3.51739790107", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"960", "stop_id"=>"323", "arrival_time"=>"19:28:00", "departure_time"=>"19:28:00", "stop_sequence"=>"0", "shape_dist_traveled"=>"0.0", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"960", "stop_id"=>"261", "arrival_time"=>"19:31:00", "departure_time"=>"19:31:00", "stop_sequence"=>"4", "shape_dist_traveled"=>"1.26139857459", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"960", "stop_id"=>"262", "arrival_time"=>"19:31:48", "departure_time"=>"19:31:48", "stop_sequence"=>"5", "shape_dist_traveled"=>"1.4396781788", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"960", "stop_id"=>"263", "arrival_time"=>"19:33:14", "departure_time"=>"19:33:14", "stop_sequence"=>"6", "shape_dist_traveled"=>"1.75225907171", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"960", "stop_id"=>"264", "arrival_time"=>"19:34:24", "departure_time"=>"19:34:24", "stop_sequence"=>"7", "shape_dist_traveled"=>"2.00984617941", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"960", "stop_id"=>"324", "arrival_time"=>"19:28:53", "departure_time"=>"19:28:53", "stop_sequence"=>"1", "shape_dist_traveled"=>"0.446844465933", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"960", "stop_id"=>"386", "arrival_time"=>"19:29:16", "departure_time"=>"19:29:16", "stop_sequence"=>"2", "shape_dist_traveled"=>"0.646577112312", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"960", "stop_id"=>"387", "arrival_time"=>"19:30:12", "departure_time"=>"19:30:12", "stop_sequence"=>"3", "shape_dist_traveled"=>"0.981689180126", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"960", "stop_id"=>"798", "arrival_time"=>"19:37:36", "departure_time"=>"19:37:36", "stop_sequence"=>"8", "shape_dist_traveled"=>"2.81354924904", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"960", "stop_id"=>"868", "arrival_time"=>"19:39:23", "departure_time"=>"19:39:23", "stop_sequence"=>"10", "shape_dist_traveled"=>"3.28412000643", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+{"trip_id"=>"960", "stop_id"=>"941", "arrival_time"=>"19:38:09", "departure_time"=>"19:38:09", "stop_sequence"=>"9", "shape_dist_traveled"=>"2.93357224447", "stop_headsign"=>"", "pickup_type"=>"", "drop_off_type"=>""}
+
+
+

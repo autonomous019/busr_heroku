@@ -1,0 +1,3 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_phone,agency_lang
+IntercityTransit,Intercity Transit,http://www.Intercitytransit.com,America/Los_Angeles,(360) 786-1881,en
+

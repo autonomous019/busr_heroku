@@ -1,0 +1,160 @@
+
+
+<h2>{{route.id}}</h2>
+Route description: {{route.description}}
+
+<p/>
+
+{{route.url}}
+
+<style type="text/css">
+      
+      #map-canvas { height: 100% ; margin: 0; padding: 0; width: 100%; }
+    </style>
+	
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+       
+	<script>
+	function initialize() {
+
+		
+	  
+	/*  
+	  var styles = [
+	    {
+	      stylers: [
+	        { hue: "#B88A00" },
+	        { saturation: -20 }
+	      ]
+	    },{
+	      featureType: "road",
+	      elementType: "geometry",
+	      stylers: [
+	        { lightness: 100 },
+	        { visibility: "simplified" }
+	      ]
+	    },{
+	      featureType: "road",
+	      elementType: "labels",
+	      stylers: [
+	        { visibility: "off" }
+	      ]
+	    }
+	  ];
+	  */
+
+      
+	  //var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	  
+	 var transitLayer = new google.maps.TransitLayer();
+	  transitLayer.setMap(map);	 
+	  
+	  var image = '/bus_stop_icon.png';
+	  
+
+		  
+		  
+
+	
+		  
+
+	  var infowindow = new google.maps.InfoWindow({
+	      
+	  });
+
+	
+	  /*
+	  var locations = [
+           ['Bondi Beach', 40.6700, -73.9400, 4],
+           ['Coogee Beach', 40.7700, -73.9500, 5],
+           ['Cronulla Beach', 40.7000, -73.9600, 3]
+         ];
+		 */
+
+		 var locations = [
+		 //handle bars each statement iterates the array of stops for the route in the cache dir: route_stops_xxxxx.js 
+		 {{#each stops}}
+		     ['<a href=\"/stop/{{id}}\">{{name}}</a><br />travel direction: {{direction}}', {{lat}}, {{lon}}],
+		 {{/each}}
+         ];
+		 
+		 var myLatlng = new google.maps.LatLng(locations[0][1], locations[0][2]);
+   	  var mapOptions = {
+   	    zoom: 14,
+   	    center: myLatlng,
+   	    mapTypeId: google.maps.MapTypeId.ROADMAP
+   		//styles: styles
+   	  };
+		 var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		 
+
+         var marker, i;
+
+         for (i = 0; i < locations.length; i++) {  
+           marker = new google.maps.Marker({
+             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+             map: map,
+  		     title: locations[i][0],
+  		     icon: image
+           });
+
+           google.maps.event.addListener(marker, 'click', (function(marker, i) {
+             return function() {
+               infowindow.setContent(locations[i][0]);
+               infowindow.open(map, marker);
+             }
+           })(marker, i));
+         }
+	  
+	  
+	  
+
+	  
+	  
+	  
+	  
+	}//ends init
+	
+	
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+
+
+</script>
+
+
+
+
+    <div id="map-canvas" style="border-style:solid;
+border-width:5px; min-height: 400px; min-width: 100px;"></div>
+
+
+<!-- 
+
+<h3>Stops</h3>
+
+
+
+{{#each stops}}
+<p>
+<a href="/stop/{{id}}">{{id}} : {{lon}} {{lat}}</a><br/>
+
+{{direction}}<br />
+{{name}}<br />
+{{code}}<br />
+{{routes}}<br />
+
+
+</p>
+{{/each}}
+-->
+
+
+
+
+
+
+

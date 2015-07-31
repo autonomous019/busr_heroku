@@ -1,0 +1,14 @@
+
+
+<h3>Agencies</h3>
+ {{! create a helper to remove underscores from name in view }}
+ 
+ Len: {{agencies.length}}
+ <p>&nbsp;</p>
+
+{{#each agencies}}
+  <a href="/agency/{{agency_name}}"> {{agency_name}} </a> <small><a href="/route_map/{{agency_name}}">[Map]</a></small><br/>
+  <br />
+  <hr>
+{{/each}}
+
