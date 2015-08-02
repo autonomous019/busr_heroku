@@ -6,7 +6,7 @@
     "www.busr.info"
   ],
   "description": "Busr Transitor, your transit adaptor",
-  "version": "0.0.1",
+  "version": "0.0.1-20",
   "scripts": {
     "predeploy": "echo starting deployment",
     "postdeploy": "echo deployment completed",
@@ -16,36 +16,13 @@
   "dependencies": {
     "express": "3.x",
     "hbs": "2.x",
-    "leaflet": "~0.7.2",
-	"redis": "^0.12.1"
+    "leaflet": "~0.7.2"
   },
   "engines": {
     "node": "0.10.x",
     "npm": "1.2.x"
   },
-  "scripts": {
-    "start": "node web.js"
-  },
   "devDependencies": {
     "should": "~2.1.0"
-  },
-  "main": "web.js",
-  "directories": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/autonomous019/busr_heroku.git"
-  },
-  "keywords": [
-    "transit",
-    "path",
-    "finding",
-    "routing"
-  ],
-  "author": "michael j.h. mccarron",
-  "license": "BSD-2-Clause",
-  "bugs": {
-    "url": "https://github.com/autonomous019/busr_heroku/issues"
   }
 }

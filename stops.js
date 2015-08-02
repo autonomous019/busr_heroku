@@ -1,6 +1,12 @@
-var redis = require("redis"),
-     client = redis.createClient();
+//var redis = require("redis"), client = redis.createClient(); #deprecated for heroku
 
+//heroku code requirements
+var redis = require('redis');
+var url = require('url');
+var redisURL = url.parse(process.env.REDISCLOUD_URL);
+var client = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
+client.auth(redisURL.auth.split(":")[1]);
+// end heroku
 client.on("error", function (err) {
     console.log("Error " + err);
 });
