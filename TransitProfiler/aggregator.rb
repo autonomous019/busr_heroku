@@ -443,6 +443,30 @@ class Aggregator
 end #end of class def
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##################### DRIVER ####################################
 # main driver
 
@@ -518,7 +542,7 @@ ARGV.each do |argv|
   puts "Total Number of Routes for "+argv+": "+routes_cnt.to_s
   
   
-  exit
+ 
   
 ############################################################################## 
   puts
@@ -575,36 +599,37 @@ ARGV.each do |argv|
 ############################################################################## 
 
 
-  
+
+
+
+# DEPRECATED FOR NOW, BACKTRACE ERRORS and push to static cache
 ############################################################################## 
     # generate transfer routes for each stop (atomized)
-    #puts
-    #puts "Generating Transfers Graph into Redis for Agency: "+argv
-    #routes_cnt = 0
-    #routes.each do |r|
-    #  agg_transfers = agg.transfers(r)
-    #  puts "Stop Routes: "+ r+" STOPS LEN "+agg_transfers.length.to_s
+#    puts
+#    puts "Generating Transfers Graph into Redis for Agency: "+argv
+#    routes_cnt = 0
+#    routes.each do |r|
+#      agg_transfers = agg.transfers(r)
+#      puts "Stop Routes: "+ r+" STOPS LEN "+agg_transfers.length.to_s
       
       
-    #  routes_cnt += 1
-    #end
+#      routes_cnt += 1
+#    end
 
   
-############################################################################## 
-    # generate transfer routes for each stop (atomized)
-    puts
-    puts "Generating Transfers Graph into Redis for Agency: "+argv
-    routes_cnt = 0
-    routes.each do |r|
-      agg_transfers = agg.transfers(r)
-      puts "Stop Routes: "+ r+" STOPS LEN "+agg_transfers.length.to_s
-      
-      
-      routes_cnt += 1
-    end
 
-  
-end
+
+
+
+
+
+
+
+
+
+
+
+end #breaking out of argv iterator
 puts "---------------------------------------------"
 puts
 
